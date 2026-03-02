@@ -5,15 +5,13 @@ import TiltMazeImg from "../assets/Tilt-Maze.png";
 import PongImg from "../assets/pong-game.png";
 import Minesweeper from "../assets/Minesweeper.png";
 import CandycrashImg from "../assets/Candy-crash.png";
-import GeometryDashImg from "../assets/geometry-dash.png";
 import Img2048 from "../assets/2048.png";
-import ImgLoadRunner from "../assets/LoadRunner.png";
 import FlappyBirdImg from "../assets/FlappyBird.png";
 import fruitsImg from "../assets/fruits.png";
-import OutRunImg from "../assets/outrun.png";
 import PacManImg from "../assets/Pacman.png";
 import ChessImg from "../assets/Chess.jpg";
 import TetrisImg from "../assets/tetris-game.png";
+import CheckersImg from "../assets/checkers.png";
 
 export const categories = [
     {
@@ -49,7 +47,7 @@ export const categories = [
                 title: "Tilt Maze",
                 description: "Navigate the maze and reach the goal.",
                 image: TiltMazeImg,
-                gamePath: "/games/Tetris/index.html",
+                gamePath: "/games/TiltMaze/index.html",
                 isNew: false
             },
             {
@@ -77,28 +75,12 @@ export const categories = [
                 isNew: true
             },
             {
-                id: 9,
-                title: "Geometry Dash",
-                description: "Jump and fly your way through danger in this rhythm-based platformer!",
-                image: GeometryDashImg,
-                gamePath: "/games/GeometryDash/index.html",
-                isNew: true
-            },
-            {
                 id: 10,
                 title: "2048",
                 description: "Slide tiles and merge them together to reach the 2048 tile.",
                 image: Img2048,
                 gamePath: "/games/2048/index.html",
                 isNew: false
-            },
-            {
-                id: 11,
-                title: "Load Runner",
-                description: "Collect gold and avoid enemies in this classic puzzle platformer.",
-                image: ImgLoadRunner,
-                gamePath: "/games/LodeRunner/lodeRunner.html",
-                isNew: true
             },
             {
                 id: 12,
@@ -115,14 +97,6 @@ export const categories = [
                 image: fruitsImg,
                 gamePath: "/games/fruits/index.html",
                 isNew: false
-            },
-            {
-                id: 15,
-                title: "OutRun",
-                description: "Race through the galaxy at top speeds!",
-                image: OutRunImg,
-                gamePath: "/games/OutRun/index.html",
-                isNew: true
             },
             {
                 id: 16,
@@ -146,6 +120,14 @@ export const categories = [
                 description: "Clear lines with falling blocks in this classic puzzle game.",
                 image: TetrisImg,
                 gamePath: "/games/tetris-game/index.html",
+                isNew: true
+            },
+            {
+                id: 19,
+                title: "Checkers",
+                description: "Outmaneuver your opponent and king your pieces in this classic strategy board game.",
+                image: CheckersImg,
+                gamePath: "/games/checkers/index.html",
                 isNew: true
             }
         ]

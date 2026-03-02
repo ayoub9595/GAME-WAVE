@@ -1,6 +1,6 @@
 # 🎮 GAME-WAVE
 
-> A modern browser-based gaming platform with a curated collection of 16 classic and original HTML5 games — built with React and Vite.
+> A modern browser-based gaming platform with a curated collection of 14 classic and original HTML5 games — built with React and Vite.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react) ![Vite](https://img.shields.io/badge/Vite-Rolldown-646CFF?style=flat-square&logo=vite) ![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=flat-square&logo=react-router) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
@@ -8,14 +8,14 @@
 
 ## ✨ Features
 
-- 🕹️ **16 embedded HTML5 games** playable directly in the browser via iframes
+- 🕹️ **14 embedded HTML5 games** playable directly in the browser via iframes
 - 🎠 **Hero carousel** — auto-rotating spotlight of featured games every 3 seconds
 - 🃏 **Game cards** with shimmer skeleton loading and HD image upscaling effect
 - 🌙 **Dark / Light theme toggle** with persistent preference
 - 📱 **Fully responsive** — optimized layout for desktop, tablet, and mobile
 - 🍔 **Mobile-friendly navigation** with a slide-in menu
 - ⛶ **Full-screen mode** — expand any game to fill the entire page
-- 📄 **Pagination** — browse up to 16 games per page with smooth scroll-to-top
+- 📄 **Pagination** — browse up to 14 games per page with smooth scroll-to-top
 - 🆕 **"New" badges** to highlight recently added games
 
 ---
@@ -31,15 +31,13 @@
 | 5 | 🏓 Pong | ✅ New |
 | 6 | 💣 Minesweeper | ✅ |
 | 7 | 🍬 Candy-Crash | ✅ New |
-| 8 | 🔺 Geometry Dash | ✅ New |
-| 9 | 🔢 2048 | ✅ |
-| 10 | 🏃 Load Runner | ✅ New |
-| 11 | 🐦 Flappy Bird | ✅ adjust the game rules on the mobile display |
-| 12 | 🍉 Fruits | ✅ |
-| 13 | 🏎️ OutRun | ✅ New |
-| 14 | 👻 PacMan | ✅ New |
-| 15 | ♟️ Chess | ✅ New |
-| 16 | 🧱 Tetris | ✅ New |
+| 8 | 🔢 2048 | ✅ |
+| 9 | 🐦 Flappy Bird | ✅ |
+| 10 | 🍉 Fruits | ✅ |
+| 11 | 👻 PacMan | ✅ New |
+| 12 | ♟️ Chess | ✅ New |
+| 13 | 🧱 Tetris | ✅ New |
+| 14 | 🏁 Checkers | ✅ New |
 
 ---
 
