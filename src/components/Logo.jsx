@@ -22,13 +22,13 @@ export default function Logo() {
             </g>
 
             {/* GAMEWAVE : On force l'application du dégradé */}
-            <text x="95" y="55" font-family="Arial, sans-serif" font-weight="900" font-size="28"
+            <text x="95" y="55" fontFamily="Arial, sans-serif" fontWeight="900" fontSize="28"
                   fill="url(#neonGradient)" style={{ letterSpacing: '1px' }}>
                 GAMEWAVE
             </text>
 
             {/* RIDE THE NEXT LEVEL : On lui donne la classe pour le CSS et on force une couleur claire par défaut */}
-            <text x="95" y="72" className="logo-slogan" font-family="Arial, sans-serif" font-weight="bold" font-size="12"
+            <text x="95" y="72" className="logo-slogan" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="12"
                   style={{ letterSpacing: '2px', textTransform: 'uppercase' }}>
                 RIDE THE NEXT LEVEL
             </text>

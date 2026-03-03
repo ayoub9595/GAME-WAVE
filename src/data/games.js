@@ -12,6 +12,7 @@ import PacManImg from "../assets/Pacman.png";
 import ChessImg from "../assets/Chess.jpg";
 import TetrisImg from "../assets/tetris-game.png";
 import CheckersImg from "../assets/checkers.png";
+import NinjaImg from "../assets/ninja-vs-evilcorp.png";
 
 export const categories = [
     {
@@ -128,6 +129,14 @@ export const categories = [
                 description: "Outmaneuver your opponent and king your pieces in this classic strategy board game.",
                 image: CheckersImg,
                 gamePath: "/games/checkers/index.html",
+                isNew: true
+            },
+            {
+                id: 20,
+                title: "Ninja vs EVILCORP",
+                description: "Outmaneuver your opponent and king your pieces in this classic strategy board game.",
+                image: NinjaImg,
+                gamePath: "/games/ninja-vs-evil-corp/index.html",
                 isNew: true
             }
         ]
