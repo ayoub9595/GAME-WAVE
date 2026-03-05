@@ -145,7 +145,7 @@ export const categories = [
                 title: "CHOCH",
                 description: "A mesmerizing audio-visual experience combining generative graphics with sound.",
                 image: ChochImg,
-                gamePath: "/games/CHOCH/src/index.html",
+                gamePath: "/games/CHOCH/index.html",
                 isNew: true
             }
         ]
