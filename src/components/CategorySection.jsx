@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import GameCard from './GameCard';
 import './CategorySection.css';
 
 const GAMES_PER_PAGE = 16;
 
 export default function CategorySection({ category }) {
+    const { t } = useTranslation();
     const [currentPage, setCurrentPage] = useState(1);
 
     const totalPages = Math.ceil(category.games.length / GAMES_PER_PAGE);
@@ -41,15 +43,15 @@ export default function CategorySection({ category }) {
                         disabled={currentPage === 1}
                         className="pagination-btn"
                     >
-                        Précédent
+                        {t('previous')}
                     </button>
-                    <span className="page-info">Page {currentPage} sur {totalPages}</span>
+                    <span className="page-info">{t('page_of', { current: currentPage, total: totalPages })}</span>
                     <button
                         onClick={goToNextPage}
                         disabled={currentPage === totalPages}
                         className="pagination-btn"
                     >
-                        Suivant
+                        {t('next')}
                     </button>
                 </div>
             )}

@@ -1,0 +1,35 @@
+{
+  "translation": {
+    "search_placeholder": "Rechercher...",
+    "no_games_found": "Aucun jeu trouvé pour \"{{query}}\"",
+    "try_another_term": "Essayez un autre terme de recherche.",
+    "hero_badge": "À LA UNE",
+    "play_now": "JOUER MAINTENANT",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page_of": "Page {{current}} sur {{total}}",
+    "category_1_title": "JEUX",
+    "game_desc_1": "Testez vos réflexes et frappez les taupes dès qu'elles apparaissent !",
+    "game_desc_2": "Le grand classique, mangez pour grandir et évitez les murs.",
+    "game_desc_3": "Défiez vos amis dans ce duel stratégique.",
+    "game_desc_4": "Parcourez le labyrinthe et atteignez l'objectif.",
+    "game_desc_5": "Vitesse et réflexes sur la table.",
+    "game_desc_6": "Videz le plateau sans faire exploser de mines cachées.",
+    "game_desc_7": "Faites exploser les bonbons dans ce puzzle addictif !",
+    "game_desc_10": "Faites glisser les tuiles et fusionnez-les pour atteindre 2048.",
+    "game_desc_12": "Faites naviguer l'oiseau à travers les tuyaux sans les toucher.",
+    "game_desc_14": "Tranchez des fruits juteux comme un vrai ninja !",
+    "game_desc_16": "Mangez les points et évitez les fantômes dans ce classique de l'arcade.",
+    "game_desc_17": "Soyez plus malin que votre adversaire dans le jeu de stratégie ultime.",
+    "game_desc_18": "Effacez les lignes avec des blocs qui tombent dans ce jeu de puzzle classique.",
+    "game_desc_19": "Déjouez votre adversaire et couronnez vos pièces dans ce jeu de dames classique.",
+    "game_desc_20": "Infiltrez EVILCORP et triomphez de vos ennemis en tant que ninja.",
+    "game_desc_21": "Une expérience audiovisuelle hypnotique combinant graphismes génératifs et son.",
+    "new_badge": "Nouveau",
+    "play_hover": "JOUER",
+    "logo_subtitle": "MONTE D'UN NIVEAU",
+    "left_ad": "PUB GAUCHE",
+    "right_ad": "PUB DROITE"
+  }
+}
+
