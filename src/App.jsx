@@ -7,8 +7,8 @@ export default function App() {
     return (
         <Router>
             <div className="main-layout">
-                <aside className="ads-sidebar left">
-                    <div className="ad-unit">PUB GAUCHE</div>
+                <aside className="promo-sidebar left">
+                    <div className="promo-unit">PUB GAUCHE</div>
                 </aside>
 
 
@@ -20,8 +20,8 @@ export default function App() {
                 </div>
 
 
-                <aside className="ads-sidebar right">
-                    <div className="ad-unit">PUB DROITE</div>
+                <aside className="promo-sidebar right">
+                    <div className="promo-unit">PUB DROITE</div>
                 </aside>
             </div>
         </Router>

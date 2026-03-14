@@ -75,7 +75,7 @@ body {
 /* ==========================================================================
    4. SIDEBARS & PUBLICITÉS (ADS)
    ========================================================================== */
-.ads-sidebar {
+.promo-sidebar {
     width: clamp(150px, 14vw, 200px);
     flex-shrink: 0;
     padding: 20px;
@@ -90,15 +90,15 @@ body {
 
 
 
-.ads-sidebar.left {
+.promo-sidebar.left {
     border-right: 1px solid var(--border);
 }
 
-.ads-sidebar.right {
+.promo-sidebar.right {
     border-left: 1px solid var(--border);
 }
 
-.ad-unit {
+.promo-unit {
     background: linear-gradient(135deg, var(--card) 0%, rgba(15, 23, 42, 0.3) 100%);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -113,7 +113,7 @@ body {
     overflow: hidden;
 }
 
-.ad-unit::before {
+.promo-unit::before {
     content: "";
     position: absolute;
     top: -100%;
@@ -180,20 +180,20 @@ body {
 
 /* Écrans moyens (Tablettes et petits Laptops) */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .ads-sidebar {
+    .promo-sidebar {
         display: none;
     }
 }
 
 @media (max-width: 1150px) {
-    .ads-sidebar {
+    .promo-sidebar {
         display: none;
     }
 }
 
 /* Mobile Standard (768px) */
 @media (max-width: 768px) {
-    .ads-sidebar {
+    .promo-sidebar {
         display: none;
     }
 }
@@ -207,7 +207,7 @@ body {
 
 /* Très petits Mobiles (380px) */
 @media (max-width: 380px) {
-    .ads-sidebar {
+    .promo-sidebar {
         display: none;
     }
 
