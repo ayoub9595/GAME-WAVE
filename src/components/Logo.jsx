@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import './Logo.css';
 
 export default function Logo() {
+    const { t } = useTranslation();
     return (
         <svg width="400" height="120" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -30,7 +32,7 @@ export default function Logo() {
             {/* RIDE THE NEXT LEVEL : On lui donne la classe pour le CSS et on force une couleur claire par défaut */}
             <text x="95" y="72" className="logo-slogan" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="12"
                   style={{ letterSpacing: '2px', textTransform: 'uppercase' }}>
-                RIDE THE NEXT LEVEL
+                {t('logo_subtitle')}
             </text>
         </svg>
     );

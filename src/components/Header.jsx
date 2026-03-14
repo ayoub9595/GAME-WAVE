@@ -1,10 +1,13 @@
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import ThemeToggle from './ThemeToggle';
 import Logo from './Logo';
 import MobileMenu from './MobileMenu.jsx';
+import LanguageSwitcher from './LanguageSwitcher';
 import './Header.css';
 
 export default function Header() {
+    const { t } = useTranslation();
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
     const location = useLocation();
@@ -35,7 +38,7 @@ export default function Header() {
                     <span className="search-icon">🔍</span>
                     <input
                         className="search"
-                        placeholder="Rechercher..."
+                        placeholder={t('search_placeholder')}
                         value={query}
                         onChange={handleSearch}
                         autoFocus={location.search.includes('search=')}
@@ -44,6 +47,7 @@ export default function Header() {
             </div>
 
             <div className="header-actions">
+                <LanguageSwitcher />
                 <ThemeToggle />
                 <MobileMenu />
             </div>

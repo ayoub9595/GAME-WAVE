@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './HeroBanner.css';
 import { categories } from '../data/games';
 
 export default function HeroBanner() {
+    const { t } = useTranslation();
     const [slides, setSlides] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -33,10 +35,10 @@ export default function HeroBanner() {
     return (
         <section className="hero-section">
             <div className="hero-content">
-                <span className="hero-badge">À LA UNE</span>
-                <h1>{slides[currentIndex].title}</h1>
-                <p>{slides[currentIndex].description}</p>
-                <button className="hero-btn" onClick={handlePlayGame}>JOUER MAINTENANT</button>
+                <span className="hero-badge">{t('hero_badge')}</span>
+                <h1>{t(`game_title_${slides[currentIndex].id}`, { defaultValue: slides[currentIndex].title })}</h1>
+                <p>{t(`game_desc_${slides[currentIndex].id}`, { defaultValue: slides[currentIndex].description })}</p>
+                <button className="hero-btn" onClick={handlePlayGame}>{t('play_now')}</button>
 
                 <div className="carousel-indicators">
                     {slides.map((_, index) => (

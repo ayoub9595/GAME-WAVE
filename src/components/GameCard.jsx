@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
 import './GameCard.css'
 
@@ -7,13 +8,17 @@ import './GameCard.css'
  * @param {{ game: { id: number, image: string, title: string, isNew?: boolean } }} props
  */
 export default function GameCard({ game }) {
+    const { t } = useTranslation()
     const [isLoaded, setIsLoaded] = useState(false) // Pour le loader initial
     const [isAiReady, setIsAiReady] = useState(false) // Pour ton effet HD
 
     return (
         <Link to={`/play/${game.id}`} className="game-link">
             <div className="game-card">
-                <div className={`image-wrapper ${isLoaded ? '' : 'loading-shimmer'}`}>
+                <div 
+                    className={`image-wrapper ${isLoaded ? '' : 'loading-shimmer'}`}
+                    data-play-text={t('play_hover')}
+                >
                     <img
                         src={game.image}
                         alt=""
@@ -31,7 +36,7 @@ export default function GameCard({ game }) {
                             loading="lazy"
                         />
                     )}
-                    {isLoaded && game.isNew && <span className="badge">New</span>}
+                    {isLoaded && game.isNew && <span className="badge">{t('new_badge', { defaultValue: 'New' })}</span>}
                     {isAiReady && <div className="ai-tag">HD</div>}
                 </div>
                 {isLoaded ? (
