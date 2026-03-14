@@ -2,7 +2,7 @@ import './Logo.css';
 
 export default function Logo() {
     return (
-        <svg width="280" height="80" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="400" height="120" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#22d3ee" />

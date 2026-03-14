@@ -5,13 +5,25 @@
     padding: clamp(10px, 1.2%, 18px) clamp(16px, 4%, 48px);
     background-color: var(--bg);
     border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
     z-index: 1000;
     overflow: hidden;
-    min-width: 0;
-    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.header-search {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 20px;
 }
 
 @media (max-width: 1024px) {
@@ -24,7 +36,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    flex: 0 1 500px;
+    flex: 1;
     min-width: 0;
     justify-content: flex-end;
 }
@@ -35,7 +47,7 @@
         gap: 8px;
     }
 
-    .search-container {
+    .header-search {
         display: none;
     }
 }
@@ -47,7 +59,8 @@
 
 .search {
     width: 100%;
-    padding: 12px 20px 12px 45px;
+    padding: 16px 24px 16px 50px;
+    font-size: 1.1rem;
     border-radius: 999px;
     background: var(--card);
     color: var(--text);
