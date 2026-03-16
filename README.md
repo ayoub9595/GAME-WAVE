@@ -1,14 +1,14 @@
 # 🎮 GAME-WAVE
 
-> A modern browser-based gaming platform with a curated collection of 16 classic and original HTML5 games — built with React and Vite.
+> A modern browser-based gaming platform with a curated collection of 17 classic and original HTML5 games — built with React and Vite.
 
-![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react) ![Vite](https://img.shields.io/badge/Vite-Rolldown-646CFF?style=flat-square&logo=vite) ![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=flat-square&logo=react-router) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react) ![Vite](https://img.shields.io/badge/Vite-Rolldown-646CFF?style=flat-square&logo=vite) ![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=flat-square&logo=react-router) ![i18n](https://img.shields.io/badge/i18n-EN%20%7C%20FR%20%7C%20ES%20%7C%20DE-orange?style=flat-square) ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 ---
 
 ## ✨ Features
 
-- 🕹️ **16 embedded HTML5 games** playable directly in the browser via iframes
+- 🕹️ **17 embedded HTML5 games** playable directly in the browser via iframes
 - 🎠 **Hero carousel** — auto-rotating spotlight of featured games every 3 seconds
 - 🃏 **Game cards** with shimmer skeleton loading and HD image upscaling effect
 - 🌙 **Dark / Light theme toggle** with persistent preference
@@ -17,7 +17,8 @@
 - ⛶ **Full-screen mode** — expand any game to fill the entire page
 - 📄 **Pagination** — browse games with smooth scroll-to-top
 - 🆕 **"New" badges** to highlight recently added games
-- 🎨 **Immersive gaming experiences** — from classic strategy games to audio-visual experiences
+- 🌍 **Multilingual (i18n)** — full UI support for 🇬🇧 English, 🇫🇷 French, 🇪🇸 Spanish, and 🇩🇪 German
+- 📝 **Dynamic page titles** — browser tab title adapts to the current page and active language
 
 ---
 
@@ -41,6 +42,7 @@
 | 14 | 🏁 Checkers | ✅ New |
 | 15 | 🥷 Ninja vs EVILCORP | ✅ New |
 | 16 | 🎆 CHOCH | ✅ New |
+| 17 | 🔲 Edge Not Found | ✅ New |
 
 ---
 
@@ -51,8 +53,32 @@
 | Framework | React 19 |
 | Build Tool | Vite (Rolldown) |
 | Routing | React Router DOM v7 |
+| Internationalisation | i18next + react-i18next |
 | Styling | Vanilla CSS with CSS variables |
 | Linting | ESLint 9 |
+
+---
+
+## 🌍 Internationalisation (i18n)
+
+The entire UI is available in **4 languages**, switchable at any time from the language selector in the header. The chosen language is persisted in `localStorage`.
+
+| Language | Code | Logo Subtitle |
+|----------|------|---------------|
+| 🇬🇧 English | `en` | RIDE THE NEXT LEVEL |
+| 🇫🇷 French | `fr` | PASSEZ AU NIVEAU SUPÉRIEUR |
+| 🇪🇸 Spanish | `es` | SUBE AL SIGUIENTE NIVEL |
+| 🇩🇪 German | `de` | ERREICHE DIE NÄCHSTE STUFE |
+
+Translation files live in `src/locales/<lang>.json`. To add a new language:
+
+1. Create `src/locales/<code>.json` with all the required keys (copy from `en.json`).
+2. Import and register it in `src/i18n.js`.
+3. Add an `<option>` for it in `src/components/LanguageSwitcher.jsx`.
+
+### Dynamic Page Titles
+- **Home page**: `GAME WAVE – <logo subtitle>` (updates when language changes)
+- **Game view**: `Play <GameName> on Game Wave` (translated per language, updates on language switch)
 
 ---
 
@@ -62,49 +88,49 @@
 GAME-WAVE/
 ├── public/
 │   └── games/              # Self-contained HTML5 game files
-│       ├── 2048/           # Number puzzle game
-│       ├── Candycrash/     # Candy matching puzzle
-│       ├── CHOCH/          # Audio-visual generative experience
-│       ├── checkers/       # Strategy board game
-│       ├── Chess/          # Classic chess
-│       ├── floppybird/     # Bird obstacle avoidance
-│       ├── fruits/         # Fruit slicing game
-│       ├── Minesweeper/    # Mine clearing puzzle
-│       ├── ninja-vs-evil-corp/  # Action platformer
-│       ├── Pacman/         # Dot eating arcade classic
-│       ├── Pong/           # Paddle ball game
-│       ├── Snake/          # Growth and avoidance game
-│       ├── tetris-game/    # Block falling puzzle
-│       ├── TicTacToe/      # Turn-based strategy
-│       ├── TiltMaze/       # Maze navigation
-│       └── Whack-a-mole/   # Reflex game
+│       ├── 2048/
+│       ├── Candycrash/
+│       ├── Chess/
+│       ├── CHOCH/
+│       ├── checkers/
+│       ├── Edge-Not-Found/
+│       ├── floppybird/
+│       ├── fruits/
+│       ├── Minesweeper/
+│       ├── ninja-vs-evil-corp/
+│       ├── Pacman/
+│       ├── Pong/
+│       ├── Snake/
+│       ├── tetris-game/
+│       ├── TicTacToe/
+│       ├── TiltMaze/
+│       └── Whack-a-mole/
 ├── src/
 │   ├── assets/             # Game thumbnail images (PNG/JPG)
 │   ├── components/
 │   │   ├── CategorySection.jsx  # Paginated game grid
-│   │   ├── CategorySection.css  # Grid styling
 │   │   ├── GameCard.jsx    # Game thumbnail card with shimmer loader
-│   │   ├── GameCard.css    # Card styling
 │   │   ├── GameView.jsx    # Full-page iframe game player
-│   │   ├── GameView.css    # Player styling
 │   │   ├── Header.jsx      # Top navigation bar
-│   │   ├── Header.css      # Header styling
 │   │   ├── HeroBanner.jsx  # Auto-scrolling hero carousel
-│   │   ├── HeroBanner.css  # Carousel styling
+│   │   ├── LanguageSwitcher.jsx # Language dropdown (EN/FR/ES/DE)
 │   │   ├── Logo.jsx        # Animated brand logo
-│   │   ├── Logo.css        # Logo styling
 │   │   ├── MobileMenu.jsx  # Mobile slide-in navigation
-│   │   ├── MobileMenu.css  # Menu styling
-│   │   ├── ThemeToggle.jsx # Dark/light mode switch
-│   │   └── ThemeToggle.css # Toggle styling
+│   │   └── ThemeToggle.jsx # Dark/light mode switch
 │   ├── data/
-│   │   └── games.js        # Master game catalogue (16 games)
+│   │   └── games.js        # Master game catalogue (17 games)
+│   ├── locales/
+│   │   ├── en.json         # English translations
+│   │   ├── fr.json         # French translations
+│   │   ├── es.json         # Spanish translations
+│   │   └── de.json         # German translations
 │   ├── pages/
 │   │   └── Home.jsx        # Main homepage
 │   ├── styles/
 │   │   └── theme.css       # Global theme variables
 │   ├── App.jsx             # Root layout with React Router
 │   ├── App.css             # App-level styles
+│   ├── i18n.js             # i18next configuration
 │   ├── index.css           # Global styles
 │   └── main.jsx            # React app entry point
 ├── index.html              # HTML template
@@ -165,8 +191,8 @@ The platform has been fully optimized for multi-device compatibility:
 
 - **Mobile-first design** with viewport meta tags for all devices
 - **Breakpoint optimization** covering:
-  - Mobile (320px - 768px) with portrait and landscape support
-  - Tablet (768px - 1024px)
+  - Mobile (320px – 768px) with portrait and landscape support
+  - Tablet (768px – 1024px)
   - Desktop (1024px and above)
 - **Touch-friendly controls** integrated where applicable
 - **Canvas game optimization** to prevent unwanted zoom on mobile
@@ -182,7 +208,7 @@ The platform has been fully optimized for multi-device compatibility:
 - **Puzzle Games**: 2048, Tetris, Minesweeper, Tilt Maze
 - **Action Games**: Snake, Flappy Bird, Fruits, PacMan, Whack-a-mole
 - **Classic Arcade**: Pong, Ninja vs EVILCORP
-- **Audio-Visual Experience**: CHOCH (generative graphics + sound)
+- **Audio-Visual Experiences**: CHOCH, Edge Not Found
 - **Candy Crash**: Match-3 puzzle gameplay
 
 ### Game Integration
@@ -205,14 +231,18 @@ Adding a new game to GAME-WAVE is simple:
 
 2. **Add a thumbnail image** to `src/assets/`
    - Use PNG or JPG format
-   - Recommended dimensions: 300x200px or similar aspect ratio
+   - Recommended dimensions: 300×200px or similar aspect ratio
    - Keep file size optimized for fast loading
 
-3. **Register the game** in `src/data/games.js`:
+3. **Import your image** at the top of `src/data/games.js`:
+```js
+import YourGameImg from "../assets/your-game.png";
+```
 
+4. **Register the game** in `src/data/games.js`:
 ```js
 {
-    id: 22,
+    id: 23,  // next available ID
     title: "Your Game Title",
     description: "A brief, engaging description of your game.",
     image: YourGameImg,
@@ -221,12 +251,12 @@ Adding a new game to GAME-WAVE is simple:
 }
 ```
 
-4. **Import your image** at the top of `games.js`:
-```js
-import YourGameImg from "../assets/your-game.png";
+5. **Add translated descriptions** to each locale file in `src/locales/`:
+```json
+"game_desc_23": "Your translated description here."
 ```
 
-That's it! The game card, hero carousel eligibility, and routing are all handled automatically. The game will appear in the gallery with the "New" badge.
+That's it! The game card, hero carousel eligibility, and routing are all handled automatically.
 
 ---
 
@@ -246,12 +276,6 @@ vercel deploy
 - **GitHub Pages**: Configure GitHub Actions for CI/CD
 - **Traditional Web Servers**: Upload contents of `dist/` folder
 
-### Build Output
-```bash
-npm run build
-# Creates optimized dist/ folder ready for production
-```
-
 ---
 
 ## 👨‍💻 Development Workflow
@@ -267,7 +291,7 @@ npm run build
 - **Preview**: `npm run preview` tests the production build locally
 
 ### Hot Module Replacement (HMR)
-Vite provides instant feedback during development—changes are reflected immediately without page reload.
+Vite provides instant feedback during development — changes are reflected immediately without page reload.
 
 ---
 
@@ -278,7 +302,9 @@ Vite provides instant feedback during development—changes are reflected immedi
 | **React 19** | UI framework |
 | **React DOM 19** | React rendering layer |
 | **React Router DOM 7** | Client-side routing |
-| **Prop-Types ** | Runtime type checking |
+| **i18next** | Internationalisation core |
+| **react-i18next** | React bindings for i18next |
+| **Prop-Types** | Runtime type checking |
 | **Vite (Rolldown)** | Lightning-fast build tool |
 | **ESLint 9** | Code linting |
 
@@ -318,6 +344,7 @@ Please ensure:
 - Mobile responsiveness is tested
 - Code follows the existing style conventions
 - Thumbnails are optimized for web
+- Translations are added for all 4 languages (EN, FR, ES, DE)
 
 ---
 

@@ -14,6 +14,7 @@ import TetrisImg from "../assets/tetris-game.png";
 import CheckersImg from "../assets/checkers.png";
 import NinjaImg from "../assets/ninja-vs-evilcorp.png";
 import ChochImg from "../assets/choch.png";
+import EdgeNotFoundImg from "../assets/edge-not-found.png";
 
 export const categories = [
     {
@@ -146,6 +147,14 @@ export const categories = [
                 description: "A mesmerizing audio-visual experience combining generative graphics with sound.",
                 image: ChochImg,
                 gamePath: "/games/CHOCH/index.html",
+                isNew: true
+            },
+            {
+                id: 22,
+                title: "Edge Not Found",
+                description: "A mesmerizing audio-visual experience combining generative graphics with sound.",
+                image: EdgeNotFoundImg,
+                gamePath: "/games/Edge-Not-Found/index.html",
                 isNew: true
             }
         ]
