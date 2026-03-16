@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import enTranslation from './locales/en.json';
 import frTranslation from './locales/fr.json';
 import esTranslation from './locales/es.json';
+import deTranslation from './locales/de.json';
 
 // Get default language from localStorage or fallback to French
 const defaultLanguage = localStorage.getItem('language') || 'en';
@@ -14,7 +15,8 @@ i18n
     resources: {
       en: enTranslation,
       fr: frTranslation,
-      es: esTranslation
+      es: esTranslation,
+      de: deTranslation
     },
     lng: defaultLanguage,
     fallbackLng: 'en',

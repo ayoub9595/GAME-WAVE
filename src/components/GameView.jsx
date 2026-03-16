@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { categories } from '../data/games.js';
 import Header from './Header.jsx';
 import "./GameView.css";
@@ -7,17 +8,18 @@ import "./GameView.css";
 export default function GameView() {
     const { id } = useParams();
     const [isFullMode, setIsFullMode] = useState(false);
+    const { t, i18n } = useTranslation();
 
     const game = categories[0].games.find(g => g.id === Number.parseInt(id));
 
     useEffect(() => {
         if (game) {
-            document.title = game.title;
+            document.title = t('play_on_game_wave', { game: game.title });
         }
         return () => {
-            document.title = "Game Wave";
+            document.title = `GAME WAVE – ${t('logo_subtitle')}`;
         };
-    }, [game]);
+    }, [game, i18n.language, t]);
 
     if (!game) return <div className="error">Jeu non trouvé</div>;
 

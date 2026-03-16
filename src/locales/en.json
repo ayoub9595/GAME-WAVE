@@ -29,7 +29,8 @@
     "play_hover": "PLAY",
     "logo_subtitle": "RIDE THE NEXT LEVEL",
     "left_ad": "LEFT AD",
-    "right_ad": "RIGHT AD"
+    "right_ad": "RIGHT AD",
+    "play_on_game_wave": "Play {{game}} on Game Wave"
   }
 }
 

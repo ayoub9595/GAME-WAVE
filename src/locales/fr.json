@@ -27,9 +27,10 @@
     "game_desc_21": "Une expérience audiovisuelle hypnotique combinant graphismes génératifs et son.",
     "new_badge": "Nouveau",
     "play_hover": "JOUER",
-    "logo_subtitle": "MONTE D'UN NIVEAU",
+    "logo_subtitle": "PASSEZ AU NIVEAU SUPÉRIEUR",
     "left_ad": "PUB GAUCHE",
-    "right_ad": "PUB DROITE"
+    "right_ad": "PUB DROITE",
+    "play_on_game_wave": "Jouez à {{game}} sur Game Wave"
   }
 }
 

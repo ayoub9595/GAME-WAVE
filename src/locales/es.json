@@ -27,8 +27,9 @@
     "game_desc_21": "Una fascinante experiencia audiovisual que combina gráficos generativos con sonido.",
     "new_badge": "Nuevo",
     "play_hover": "JUGAR",
-    "logo_subtitle": "SUBE DE NIVEL",
+    "logo_subtitle": "SUBE AL SIGUIENTE NIVEL",
     "left_ad": "PUBLICIDAD IZQUIERDA",
-    "right_ad": "PUBLICIDAD DERECHA"
+    "right_ad": "PUBLICIDAD DERECHA",
+    "play_on_game_wave": "Juega a {{game}} en Game Wave"
   }
 }
