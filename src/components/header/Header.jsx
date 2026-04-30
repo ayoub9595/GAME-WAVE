@@ -1,9 +1,9 @@
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import ThemeToggle from './ThemeToggle';
-import Logo from './Logo';
-import MobileMenu from './MobileMenu.jsx';
-import LanguageSwitcher from './LanguageSwitcher';
+import ThemeToggle from '../themeToggle/ThemeToggle';
+import Logo from '../logo/Logo';
+import MobileMenu from '../mobileMenu/MobileMenu.jsx';
+import LanguageSwitcher from '../languageSwitcher/LanguageSwitcher';
 import './Header.css';
 
 export default function Header() {

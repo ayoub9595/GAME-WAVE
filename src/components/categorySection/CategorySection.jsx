@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import GameCard from './GameCard';
+import GameCard from '../gameCard/GameCard';
 import './CategorySection.css';
 
 const GAMES_PER_PAGE = 16;

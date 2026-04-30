@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { categories } from '../data/games.js';
-import Header from './Header.jsx';
+import { categories } from '../../data/games.js';
+import Header from '../../components/header/Header.jsx';
 import "./GameView.css";
 
 export default function GameView() {

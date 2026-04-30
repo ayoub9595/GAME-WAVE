@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './HeroBanner.css';
-import { categories } from '../data/games';
+import { categories } from '../../data/games';
 
 export default function HeroBanner() {
     const { t } = useTranslation();
