@@ -170,49 +170,7 @@
     animation: shimmer 1.5s infinite linear;
 }
 
-/* Light mode specific hover effects */
-.game-card:hover::before {
-    content: '';
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-}
 
-.game-card:hover .image-wrapper {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    aspect-ratio: auto;
-    border-radius: var(--radius);
-}
-
-.game-card:hover .image-wrapper img {
-    height: 100%;
-}
-
-.game-card:hover .image-wrapper::after {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 100%);
-    z-index: 2;
-}
-
-.game-card:hover .image-wrapper::before {
-    z-index: 10;
-}
-
-.game-card:hover .game-title {
-    position: relative;
-    z-index: 10;
-    color: #ffffff;
-    text-align: center;
-    transform: translateY(-15px);
-    width: 100%;
-}
 
 @media (max-width: 768px) {
     .game-card:hover {
