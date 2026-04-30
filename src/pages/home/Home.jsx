@@ -5,7 +5,7 @@ import Header from '../../components/header/Header';
 import CategorySection from '../../components/categorySection/CategorySection';
 import HeroBanner from '../../components/heroBanner/HeroBanner';
 import { categories } from '../../data/games';
-import './Home.css';
+import styles from './Home.module.css';
 
 export default function Home() {
     const { t, i18n } = useTranslation();
@@ -33,7 +33,7 @@ export default function Home() {
                         <CategorySection key={cat.id} category={cat} />
                     ))
                 ) : (
-                    <div className="no-games-found">
+                    <div className={styles['no-games-found']}>
                         <h2>{t('no_games_found', { query })}</h2>
                         <p>{t('try_another_term')}</p>
                     </div>

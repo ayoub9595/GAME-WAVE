@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import './Logo.css';
+import styles from './Logo.module.css';
 
 export default function Logo() {
     const { t } = useTranslation();
     return (
-        <svg width="400" height="120" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="400" height="120" viewBox="0 0 350 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.logo}>
             <defs>
                 <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#22d3ee" />
@@ -30,7 +30,7 @@ export default function Logo() {
             </text>
 
             {/* RIDE THE NEXT LEVEL : On lui donne la classe pour le CSS et on force une couleur claire par défaut */}
-            <text x="95" y="72" className="logo-slogan" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="12"
+            <text x="95" y="72" className={styles['logo-slogan']} fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="12"
                   style={{ letterSpacing: '2px', textTransform: 'uppercase' }}>
                 {t('logo_subtitle')}
             </text>

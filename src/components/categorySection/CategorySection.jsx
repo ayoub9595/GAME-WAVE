@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GameCard from '../gameCard/GameCard';
-import './CategorySection.css';
+import styles from './CategorySection.module.css';
 
 const GAMES_PER_PAGE = 16;
 
@@ -29,27 +29,27 @@ export default function CategorySection({ category }) {
     };
 
     return (
-        <section className="category">
-            <div className="grid">
+        <section className={styles.category}>
+            <div className={styles.grid}>
                 {displayedGames.map(game => (
                     <GameCard key={game.id} game={game} />
                 ))}
             </div>
 
             {totalPages > 1 && (
-                <div className="pagination">
+                <div className={styles.pagination}>
                     <button
                         onClick={goToPrevPage}
                         disabled={currentPage === 1}
-                        className="pagination-btn"
+                        className={styles['pagination-btn']}
                     >
                         {t('previous')}
                     </button>
-                    <span className="page-info">{t('page_of', { current: currentPage, total: totalPages })}</span>
+                    <span className={styles['page-info']}>{t('page_of', { current: currentPage, total: totalPages })}</span>
                     <button
                         onClick={goToNextPage}
                         disabled={currentPage === totalPages}
-                        className="pagination-btn"
+                        className={styles['pagination-btn']}
                     >
                         {t('next')}
                     </button>

@@ -4,7 +4,7 @@ import ThemeToggle from '../themeToggle/ThemeToggle';
 import Logo from '../logo/Logo';
 import MobileMenu from '../mobileMenu/MobileMenu.jsx';
 import LanguageSwitcher from '../languageSwitcher/LanguageSwitcher';
-import './Header.css';
+import styles from './Header.module.css';
 
 export default function Header() {
     const { t } = useTranslation();
@@ -28,16 +28,16 @@ export default function Header() {
     };
 
     return (
-        <header className="header">
-            <div className="logo">
+        <header className={styles.header}>
+            <div className={styles.logo}>
                 <Logo />
             </div>
 
-            <div className="header-search">
-                <div className="search-container">
-                    <span className="search-icon">🔍</span>
+            <div className={styles['header-search']}>
+                <div className={styles['search-container']}>
+                    <span className={styles['search-icon']}>🔍</span>
                     <input
-                        className="search"
+                        className={styles.search}
                         placeholder={t('search_placeholder')}
                         value={query}
                         onChange={handleSearch}
@@ -46,7 +46,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="header-actions">
+            <div className={styles['header-actions']}>
                 <LanguageSwitcher />
                 <ThemeToggle />
                 <MobileMenu />

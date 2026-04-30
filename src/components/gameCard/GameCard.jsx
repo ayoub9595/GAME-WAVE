@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
-import './GameCard.css'
+import styles from './GameCard.module.css'
 
 /**
  * @param {{ game: { id: number, image: string, title: string, isNew?: boolean } }} props
@@ -13,16 +13,16 @@ export default function GameCard({ game }) {
     const [isAiReady, setIsAiReady] = useState(false) // Pour ton effet HD
 
     return (
-        <Link to={`/play/${game.id}`} className="game-link">
-            <div className="game-card">
-                <div 
-                    className={`image-wrapper ${isLoaded ? '' : 'loading-shimmer'}`}
+        <Link to={`/play/${game.id}`} className={styles['game-link']}>
+            <div className={styles['game-card']}>
+                <div
+                    className={`${styles['image-wrapper']} ${isLoaded ? '' : styles['loading-shimmer']}`}
                     data-play-text={t('play_hover')}
                 >
                     <img
                         src={game.image}
                         alt=""
-                        className={`img-original ${isLoaded ? 'visible' : ''}`}
+                        className={`${styles['img-original']} ${isLoaded ? styles.visible : ''}`}
                         onLoad={() => setIsLoaded(true)}
                     />
 
@@ -31,18 +31,18 @@ export default function GameCard({ game }) {
                         <img
                             src={game.image} // Ici tu mettras ton URL HD plus tard
                             alt={game.title}
-                            className={`img-ai-upscaled ${isAiReady ? 'loaded' : ''}`}
+                            className={`${styles['img-ai-upscaled']} ${isAiReady ? styles.loaded : ''}`}
                             onLoad={() => setIsAiReady(true)}
                             loading="lazy"
                         />
                     )}
-                    {isLoaded && game.isNew && <span className="badge">{t('new_badge', { defaultValue: 'New' })}</span>}
-                    {isAiReady && <div className="ai-tag">HD</div>}
+                    {isLoaded && game.isNew && <span className={styles.badge}>{t('new_badge', { defaultValue: 'New' })}</span>}
+                    {isAiReady && <div className={styles['ai-tag']}>HD</div>}
                 </div>
                 {isLoaded ? (
-                    <h3 className="game-title">{game.title}</h3>
+                    <h3 className={styles['game-title']}>{game.title}</h3>
                 ) : (
-                    <div className="skeleton-text"></div>
+                    <div className={styles['skeleton-text']}></div>
                 )}
             </div>
         </Link>

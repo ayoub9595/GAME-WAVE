@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './MobileMenu.css'
+import styles from './MobileMenu.module.css'
 
 export default function MobileMenu() {
     const [isOpen, setIsOpen] = useState(false)
@@ -35,30 +35,30 @@ export default function MobileMenu() {
         <>
             {/* Bouton Hamburger */}
             <button
-                className={`hamburger-btn ${isOpen ? 'active' : ''}`}
+                className={`${styles['hamburger-btn']} ${isOpen ? styles.active : ''}`}
                 onClick={toggleMenu}
                 aria-label="Menu"
             >
-                <span className="hamburger-line"></span>
-                <span className="hamburger-line"></span>
-                <span className="hamburger-line"></span>
+                <span className={styles['hamburger-line']}></span>
+                <span className={styles['hamburger-line']}></span>
+                <span className={styles['hamburger-line']}></span>
             </button>
 
             {/* Overlay */}
             <div
-                className={`menu-overlay ${isOpen ? 'active' : ''}`}
+                className={`${styles['menu-overlay']} ${isOpen ? styles.active : ''}`}
                 onClick={toggleMenu}
             ></div>
 
             {/* Menu Latéral */}
-            <nav className={`mobile-menu ${isOpen ? 'active' : ''}`}>
-                <div className="mobile-menu-header">
-                    <div className="menu-logo">
-                        <span className="menu-logo-text">GAMEWAVE</span>
-                        <span className="menu-logo-slogan">RIDE THE NEXT LEVEL</span>
+            <nav className={`${styles['mobile-menu']} ${isOpen ? styles.active : ''}`}>
+                <div className={styles['mobile-menu-header']}>
+                    <div className={styles['menu-logo']}>
+                        <span className={styles['menu-logo-text']}>GAMEWAVE</span>
+                        <span className={styles['menu-logo-slogan']}>RIDE THE NEXT LEVEL</span>
                     </div>
                     <button
-                        className="menu-close-btn"
+                        className={styles['menu-close-btn']}
                         onClick={toggleMenu}
                         aria-label="Fermer le menu"
                     >
@@ -66,32 +66,32 @@ export default function MobileMenu() {
                     </button>
                 </div>
 
-                <ul className="menu-items">
+                <ul className={styles['menu-items']}>
                     {menuItems.map((item, index) => (
                         <li
                             key={item.name}
-                            className="menu-item"
+                            className={styles['menu-item']}
                             style={{ animationDelay: `${index * 0.05}s` }}
                         >
                             <a
                                 href={item.href}
                                 onClick={toggleMenu}
-                                className="menu-link"
+                                className={styles['menu-link']}
                             >
-                                <span className="menu-icon">{item.icon}</span>
-                                <span className="menu-text">{item.name}</span>
-                                <span className="menu-arrow">›</span>
+                                <span className={styles['menu-icon']}>{item.icon}</span>
+                                <span className={styles['menu-text']}>{item.name}</span>
+                                <span className={styles['menu-arrow']}>›</span>
                             </a>
                         </li>
                     ))}
                 </ul>
 
-                <div className="menu-footer">
-                    <div className="menu-footer-item">
+                <div className={styles['menu-footer']}>
+                    <div className={styles['menu-footer-item']}>
                         <span>🎮</span>
                         <span>+1000 Jeux</span>
                     </div>
-                    <div className="menu-footer-item">
+                    <div className={styles['menu-footer-item']}>
                         <span>🆓</span>
                         <span>100% Gratuit</span>
                     </div>

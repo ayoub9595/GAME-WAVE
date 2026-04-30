@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { categories } from '../../data/games.js';
 import Header from '../../components/header/Header.jsx';
-import "./GameView.css";
+import styles from './GameView.module.css';
 
 export default function GameView() {
     const { id } = useParams();
@@ -21,20 +21,20 @@ export default function GameView() {
         };
     }, [game, i18n.language, t]);
 
-    if (!game) return <div className="error">Jeu non trouvé</div>;
+    if (!game) return <div className={styles.error}>Jeu non trouvé</div>;
 
 
 
     return (
-        <div className={`game-page-layout ${isFullMode ? 'full-mode-active' : ''}`}>
+        <div className={`${styles['game-page-layout']} ${isFullMode ? styles['full-mode-active'] : ''}`}>
             {!isFullMode && <Header />}
 
-            <main className="game-main-content">
+            <main className={styles['game-main-content']}>
 
 
-                <div className="game-iframe-container">
+                <div className={styles['game-iframe-container']}>
                     <button
-                        className="fullscreen-btn"
+                        className={styles['fullscreen-btn']}
                         onClick={() => setIsFullMode(!isFullMode)}
                         title={isFullMode ? "Exit Fullscreen" : "Enter Fullscreen"}
                     >
