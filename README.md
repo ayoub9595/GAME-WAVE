@@ -43,6 +43,7 @@
 | 15 | 🥷 Ninja vs EVILCORP | ✅ New |
 | 16 | 🎆 CHOCH | ✅ New |
 | 17 | 🔲 Edge Not Found | ✅ New |
+| 18 | 🕹️ Fourfold | ✅ New |
 
 ---
 

@@ -15,6 +15,7 @@ import CheckersImg from "../assets/checkers.png";
 import NinjaImg from "../assets/ninja-vs-evilcorp.png";
 import ChochImg from "../assets/choch.png";
 import EdgeNotFoundImg from "../assets/edge-not-found.png";
+import FourfoldImg from "../assets/fourfold.png";
 
 export const categories = [
     {
@@ -155,6 +156,13 @@ export const categories = [
                 description: "A mesmerizing audio-visual experience combining generative graphics with sound.",
                 image: EdgeNotFoundImg,
                 gamePath: "/games/Edge-Not-Found/index.html",
+            },
+            {
+                id: 23,
+                title: "Fourfold",
+                description: "A mesmerizing audio-visual experience combining generative graphics with sound.",
+                image: FourfoldImg,
+                gamePath: "/games/fourfold/index.html",
                 isNew: true
             }
         ]
