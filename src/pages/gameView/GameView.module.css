@@ -1,22 +1,23 @@
 /* =============================================================
-   GAMEVIEW.CSS - REFINED NO-SCROLL LAYOUT
+   GAMEVIEW — le jeu occupe l'écran, le contenu éditorial suit dessous.
+   La page défile désormais (elle était bloquée en height:100dvh /
+   overflow:hidden), sinon la description, les crédits et les jeux
+   similaires seraient inaccessibles.
    ============================================================= */
 
 .game-page-layout {
     width: 100%;
     max-width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden;
-    /* CRITICAL: Prevent outer scroll */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .game-page-layout header {
-    position: relative !important;
+    position: relative;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -30,77 +31,163 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: clamp(5px, 1.5vh, 15px) !important;
-    margin: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    padding: clamp(5px, 1.5vh, 15px);
+    margin: 0;
     min-height: 0;
     box-sizing: border-box;
     align-items: center;
     position: relative;
-    overflow: hidden;
 }
 
 .game-iframe-container {
     position: relative;
-    width: 100% !important;
+    width: 100%;
     max-width: 1200px;
-    flex: 1;
-    min-height: 0;
-    max-height: calc(100dvh - 180px);
-    /* Aggressive safety reserve */
+    /* Le jeu remplit la hauteur visible sans jamais dépasser l'écran */
+    height: clamp(320px, calc(100dvh - 190px), 760px);
     background: #000;
     overflow: hidden;
     border: 3px solid var(--primary);
-    border-radius: 12px !important;
-    margin-bottom: 5px !important;
+    border-radius: 12px;
+    margin-bottom: 5px;
     box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
-    display: flex;
-    flex-direction: column;
+    flex-shrink: 0;
 }
 
 .game-iframe-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
     border: none;
     display: block;
 }
 
-@media (max-height: 700px) {
-    .game-iframe-container {
-        max-height: calc(100dvh - 140px);
-    }
-
-    .game-page-layout header {
-        padding: 8px 40px;
-    }
+/* -------------------------------------------------------------
+   Contenu éditorial
+   ------------------------------------------------------------- */
+.details {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem 1rem 3rem;
+    line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-    .game-page-layout header {
-        padding: 10px 20px;
-    }
-
-    .game-iframe-container {
-        border-width: 2px;
-        max-height: calc(100dvh - 120px);
-    }
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
 }
 
-/* Full Mode Page Styles */
+.breadcrumb a {
+    color: var(--primary);
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin: 0;
+}
+
+.tags {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags li {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    opacity: 0.8;
+}
+
+.details h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    margin: 2rem 0 0.5rem;
+}
+
+.description {
+    max-width: 70ch;
+}
+
+.credits {
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
+
+.credits a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.related {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* -------------------------------------------------------------
+   Page « jeu introuvable »
+   ------------------------------------------------------------- */
+.error {
+    padding: 4rem 1rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* -------------------------------------------------------------
+   Plein écran : on retrouve le comportement sans défilement
+   ------------------------------------------------------------- */
 .game-page-layout.full-mode-active {
     position: fixed;
     inset: 0;
     z-index: 9999;
     background: #000;
+    overflow: hidden;
+    height: 100dvh;
 }
 
 .game-page-layout.full-mode-active .game-main-content {
-    padding: 0 !important;
+    padding: 0;
     height: 100dvh;
+}
+
+.game-page-layout.full-mode-active .game-iframe-container {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    height: 100dvh;
+    max-width: none;
 }
 
 .fullscreen-btn {
@@ -130,29 +217,89 @@
     background: rgba(15, 23, 42, 0.9);
     border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-1px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .fullscreen-btn:active {
     transform: translateY(1px);
 }
 
-.game-page-layout.full-mode-active .game-iframe-container {
-    border: none;
-    border-radius: 0 !important;
-    margin-bottom: 0 !important;
-    max-height: 100dvh;
-    max-width: 100dvw;
+@media (max-height: 700px) {
+    .game-iframe-container {
+        height: clamp(280px, calc(100dvh - 150px), 760px);
+    }
+
+    .game-page-layout header {
+        padding: 8px 40px;
+    }
 }
 
-/* Landscape Overrides */
-@media screen and (orientation: landscape) and (max-height: 500px) {
-    .game-page-layout:not(.full-mode-active) header {
-        display: none !important;
+@media (max-width: 768px) {
+    .game-page-layout header {
+        padding: 10px 14px;
+    }
+
+    .game-main-content {
+        padding: 8px 0 0;
     }
 
     .game-iframe-container {
-        max-height: 100dvh;
-        border-radius: 0 !important;
+        border-width: 2px;
+        border-radius: 10px;
+        /* Le jeu occupe l'écran utile sans jamais dépasser : la hauteur du
+           header mobile est prise en compte. */
+        height: clamp(260px, calc(100dvh - 150px), 760px);
+        width: calc(100% - 16px);
+        margin: 0 8px 5px;
+    }
+
+    /* Bouton plein écran compact : il chevauchait l'interface du jeu */
+    .fullscreen-btn {
+        top: 8px;
+        right: 8px;
+        padding: 0;
+        width: 42px;
+        height: 42px;
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    .fullscreen-btn span {
+        display: none;
+    }
+
+    .details {
+        padding: 1.5rem 14px 2.5rem;
+    }
+
+    .title {
+        font-size: clamp(1.4rem, 6vw, 1.9rem);
+    }
+
+    .related {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .breadcrumb {
+        row-gap: 0.25rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .game-iframe-container {
+        height: clamp(240px, calc(100dvh - 140px), 760px);
+    }
+}
+
+/* Paysage sur mobile : priorité totale au jeu */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .game-page-layout:not(.full-mode-active) header {
+        display: none;
+    }
+
+    .game-iframe-container {
+        height: 100dvh;
+        border-radius: 0;
+        border-width: 0;
     }
 }

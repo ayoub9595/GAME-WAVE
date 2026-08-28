@@ -1,63 +1,81 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './HeroBanner.module.css';
-import { categories } from '../../data/games';
+import { games } from '../../data/games';
+import { useLocalized } from '../../hooks/useLocalized';
+
+const ROTATION_MS = 6500; // 3 s était trop court pour lire titre + description
+
+// Liste stable : plus de Math.random(). Le contenu est identique à chaque
+// chargement, donc indexable, et le H1 de la page ne bouge plus.
+const featured = games.filter((g) => g.featured).slice(0, 5);
+const fallback = games.slice(0, 5);
 
 export default function HeroBanner() {
     const { t } = useTranslation();
-    const [slides, setSlides] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const { gameTitle, gameShort } = useLocalized();
+    const list = featured.length ? featured : fallback;
+    const [index, setIndex] = useState(0);
+    const [paused, setPaused] = useState(false);
 
     useEffect(() => {
-        const allGames = categories[0].games;
-        const shuffled = [...allGames].sort(() => 0.5 - Math.random());
-        setSlides(shuffled.slice(0, 7));
-    }, []);
-
-    useEffect(() => {
-        if (slides.length === 0) return;
-
-        const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) =>
-                prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-            );
-        }, 3000);
-
+        if (paused || list.length < 2) return;
+        const timer = setInterval(() => setIndex((i) => (i + 1) % list.length), ROTATION_MS);
         return () => clearInterval(timer);
-    }, [slides.length]);
+    }, [paused, list.length]);
 
-    if (slides.length === 0) return null;
-
-    const handlePlayGame = () => {
-        window.open(`/play/${slides[currentIndex].id}`);
-    };
+    if (!list.length) return null;
+    const current = list[index];
 
     return (
-        <section className={styles['hero-section']}>
+        <section className={styles['hero-section']} aria-label={t('hero_badge')}>
             <div className={styles['hero-content']}>
-                <span className={styles['hero-badge']}>{t('hero_badge')}</span>
-                <h1>{t(`game_title_${slides[currentIndex].id}`, { defaultValue: slides[currentIndex].title })}</h1>
-                <p>{t(`game_desc_${slides[currentIndex].id}`, { defaultValue: slides[currentIndex].description })}</p>
-                <button className={styles['hero-btn']} onClick={handlePlayGame}>{t('play_now')}</button>
+                {/* H1 fixe : c'est le sujet de la page, il ne doit pas tourner */}
+                <h1 className={styles['hero-h1']}>{t('home_h1')}</h1>
 
-                <div className={styles['carousel-indicators']}>
-                    {slides.map((_, index) => (
-                        <div
-                            key={index}
-                            className={`${styles.dot} ${index === currentIndex ? styles.active : ''}`}
-                            onClick={() => setCurrentIndex(index)}
-                        ></div>
+                <span className={styles['hero-badge']}>{t('hero_badge')}</span>
+                <h2 className={styles['hero-game-title']}>{gameTitle(current)}</h2>
+                <p>{gameShort(current)}</p>
+
+                {/* Un vrai lien : crawlable, et l'utilisateur choisit d'ouvrir un onglet ou non */}
+                <Link className={styles['hero-btn']} to={`/play/${current.slug}`}>
+                    {t('play_now')}
+                </Link>
+
+                <div className={styles['carousel-indicators']} role="tablist">
+                    {list.map((g, i) => (
+                        <button
+                            key={g.slug}
+                            type="button"
+                            role="tab"
+                            aria-selected={i === index}
+                            aria-label={gameTitle(g)}
+                            className={`${styles.dot} ${i === index ? styles.active : ''}`}
+                            onClick={() => setIndex(i)}
+                        />
                     ))}
+                    {/* WCAG 2.2.2 : tout contenu animé doit pouvoir être arrêté */}
+                    <button
+                        type="button"
+                        className={styles['pause-btn']}
+                        onClick={() => setPaused((p) => !p)}
+                        aria-label={paused ? t('resume') : t('pause')}
+                    >
+                        {paused ? '▶' : '❚❚'}
+                    </button>
                 </div>
             </div>
 
-            <div className={styles['hero-image-overlay']}></div>
-
+            <div className={styles['hero-image-overlay']} />
             <img
                 className={styles['hero-img']}
-                src={slides[currentIndex].image}
-                alt={slides[currentIndex].title}
-                key={slides[currentIndex].id}
+                src={current.image}
+                alt={gameTitle(current)}
+                width="440"
+                height="248"
+                fetchPriority="high"
+                key={current.slug}
             />
         </section>
     );

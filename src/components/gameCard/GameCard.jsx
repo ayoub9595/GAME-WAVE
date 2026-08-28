@@ -2,56 +2,54 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
+import FavoriteButton from '../favoriteButton/FavoriteButton'
+import { useLocalized } from '../../hooks/useLocalized'
 import styles from './GameCard.module.css'
 
-/**
- * @param {{ game: { id: number, image: string, title: string, isNew?: boolean } }} props
- */
 export default function GameCard({ game }) {
     const { t } = useTranslation()
-    const [isLoaded, setIsLoaded] = useState(false) // Pour le loader initial
-    const [isAiReady, setIsAiReady] = useState(false) // Pour ton effet HD
+    const { gameTitle } = useLocalized()
+    const [isLoaded, setIsLoaded] = useState(false)
+    const title = gameTitle(game)
 
     return (
-        <Link to={`/play/${game.id}`} className={styles['game-link']}>
-            <div className={styles['game-card']}>
-                <div
-                    className={`${styles['image-wrapper']} ${isLoaded ? '' : styles['loading-shimmer']}`}
-                    data-play-text={t('play_hover')}
-                >
-                    <img
-                        src={game.image}
-                        alt=""
-                        className={`${styles['img-original']} ${isLoaded ? styles.visible : ''}`}
-                        onLoad={() => setIsLoaded(true)}
-                    />
-
-                    {/* 2. Image IA (Celle qui devient HD) */}
-                    {isLoaded && (
+        <div className={styles['card-outer']}>
+            <Link to={`/play/${game.slug}`} className={styles['game-link']}>
+                <div className={styles['game-card']}>
+                    <div
+                        className={`${styles['image-wrapper']} ${isLoaded ? '' : styles['loading-shimmer']}`}
+                        data-play-text={t('play_hover')}
+                    >
                         <img
-                            src={game.image} // Ici tu mettras ton URL HD plus tard
-                            alt={game.title}
-                            className={`${styles['img-ai-upscaled']} ${isAiReady ? styles.loaded : ''}`}
-                            onLoad={() => setIsAiReady(true)}
+                            src={game.image}
+                            alt={title}
+                            width="440"
+                            height="248"
                             loading="lazy"
+                            decoding="async"
+                            className={`${styles['img-original']} ${isLoaded ? styles.visible : ''}`}
+                            onLoad={() => setIsLoaded(true)}
                         />
+                        {isLoaded && game.isNew && (
+                            <span className={styles.badge}>{t('new_badge')}</span>
+                        )}
+                    </div>
+                    {isLoaded ? (
+                        <h3 className={styles['game-title']}>{title}</h3>
+                    ) : (
+                        <div className={styles['skeleton-text']}></div>
                     )}
-                    {isLoaded && game.isNew && <span className={styles.badge}>{t('new_badge', { defaultValue: 'New' })}</span>}
-                    {isAiReady && <div className={styles['ai-tag']}>HD</div>}
                 </div>
-                {isLoaded ? (
-                    <h3 className={styles['game-title']}>{game.title}</h3>
-                ) : (
-                    <div className={styles['skeleton-text']}></div>
-                )}
-            </div>
-        </Link>
+            </Link>
+            {/* Hors du <Link> : un bouton dans un lien est invalide en HTML */}
+            <FavoriteButton slug={game.slug} title={title} className={styles['fav-on-card']} />
+        </div>
     )
 }
 
 GameCard.propTypes = {
     game: PropTypes.shape({
-        id: PropTypes.number.isRequired,
+        slug: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         isNew: PropTypes.bool,

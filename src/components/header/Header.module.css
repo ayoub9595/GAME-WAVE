@@ -1,55 +1,47 @@
+/* Un seul conteneur flex, trois enfants : logo / recherche / actions.
+   Sur grand écran : une ligne. Sur mobile : le logo et les actions restent
+   sur la première ligne, la recherche passe à la ligne (et ne s'affiche que
+   si on l'ouvre).
+
+   Plus d'overflow:hidden ici — c'est lui qui cachait silencieusement le menu,
+   la langue et le thème, poussés hors de l'écran par le logo de 400 px. */
 .header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    padding: clamp(10px, 1.2%, 18px) clamp(16px, 4%, 48px);
+    gap: 10px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(10px, 1.2%, 18px) clamp(12px, 4%, 48px);
     background-color: var(--bg);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
-    overflow: hidden;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex: 1;
+    min-width: 0;
+    flex: 0 1 auto;
+    order: 1;
 }
 
 .header-search {
-    flex: 2;
     display: flex;
     justify-content: center;
-    max-width: 800px;
-    margin: 0 20px;
-}
-
-@media (max-width: 1024px) {
-    .header {
-        padding: clamp(8px, 1.2%, 14px) clamp(14px, 2.5%, 28px);
-    }
+    order: 2;
+    flex: 1 1 320px;
+    min-width: 0;
+    max-width: 720px;
 }
 
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 15px;
-    flex: 1;
-    min-width: 0;
-    justify-content: flex-end;
-}
-
-@media (max-width: 768px) {
-    .header-actions {
-        flex: 0 0 auto;
-        gap: 8px;
-    }
-
-    .header-search {
-        display: none;
-    }
+    gap: 12px;
+    flex: 0 0 auto;
+    order: 3;
+    margin-left: auto;
 }
 
 .search-container {
@@ -59,15 +51,16 @@
 
 .search {
     width: 100%;
-    padding: 16px 24px 16px 50px;
-    font-size: 1.1rem;
+    padding: 12px 20px 12px 46px;
+    font-size: 1rem;
     border-radius: 999px;
     background: var(--card);
     color: var(--text);
     border: 1px solid var(--border);
     outline: none;
     font-family: inherit;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .search:focus {
@@ -75,11 +68,66 @@
     box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
 }
 
+/* Le bouton natif de vidage de <input type="search"> reste cliquable */
+.search::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+
 .search-icon {
     position: absolute;
-    left: 18px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
     opacity: 0.6;
     pointer-events: none;
+}
+
+/* La loupe ne sert que sur mobile : au-dessus, la recherche est visible. */
+.search-toggle {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 10px 14px;
+        gap: 8px 10px;
+    }
+
+    /* La recherche prend toute la deuxième ligne, et n'est affichée que si
+       on l'ouvre, ou si une recherche est déjà active dans l'URL. */
+    .header-search {
+        order: 4;
+        flex: 1 0 100%;
+        max-width: none;
+        display: none;
+    }
+
+    .header-search.open {
+        display: flex;
+    }
+
+    .search-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 17px;
+        line-height: 1;
+        border-radius: 12px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 0;
+    }
+
+    .search-toggle[aria-expanded='true'] {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
 }

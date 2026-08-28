@@ -1,0 +1,89 @@
+.footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding: 2.5rem 1rem 2rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+}
+
+.grid h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 0.75rem;
+    opacity: 0.9;
+}
+
+.grid p {
+    margin: 0;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+.grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.grid a {
+    color: var(--text);
+    opacity: 0.75;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.grid a:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+.bottom {
+    margin: 2.5rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    opacity: 0.6;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 14px 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .grid {
+        /* Deux colonnes plutôt qu'une seule très longue liste */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem 1rem;
+    }
+
+    /* Liens de 16 px de haut : trop serrés au doigt.
+       On leur donne une hauteur de cible correcte. */
+    .grid ul {
+        gap: 0;
+    }
+
+    .grid li a {
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

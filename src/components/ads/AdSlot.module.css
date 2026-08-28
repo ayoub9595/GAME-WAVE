@@ -1,0 +1,25 @@
+.slot {
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 1.5rem auto;
+}
+
+.banner {
+    width: 100%;
+    max-width: 970px;
+    min-height: 90px;
+}
+
+.card {
+    aspect-ratio: 16 / 9;
+}
+
+.sidebar {
+    min-height: 600px;
+}
+
+.interstitial {
+    width: 100%;
+    min-height: 250px;
+}

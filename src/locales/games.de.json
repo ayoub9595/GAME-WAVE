@@ -1,0 +1,110 @@
+{
+  "whack-a-mole": {
+    "title": "Whack-a-Mole",
+    "short": "Teste deine Reflexe und triff die Maulwürfe, sobald sie auftauchen.",
+    "long": "Whack-a-Mole ist reine Reflexarbeit: Maulwürfe tauchen zufällig in einem Raster auf, und du musst sie treffen, bevor sie wieder verschwinden. Das Tempo zieht an, je höher dein Punktestand steigt, bis das Reaktionsfenster unter eine halbe Sekunde fällt. Genau dann wird das Spiel interessant: Zielen allein genügt nicht mehr, du musst die Felder vorausahnen, in denen die Maulwürfe am häufigsten erscheinen, und den Zeiger in Bewegung halten, statt ihn in der Mitte zu parken. Eine Runde dauert weniger als zwei Minuten, was es zum idealen Pausenspiel macht: Du kannst so oft neu starten, wie du willst, um deinen eigenen Rekord zu schlagen. Keine Installation, keine Anmeldung, kein Download: Die Runde startet mit einem Klick im Browser, am Rechner wie am Handy, wo der Touchscreen die Maus ersetzt, ohne am Prinzip etwas zu ändern.",
+    "controls": "Maus oder Finger: Triff die Maulwürfe, die auftauchen."
+  },
+  "snake": {
+    "title": "Snake",
+    "short": "Der zeitlose Klassiker: fressen, wachsen, Wände meiden.",
+    "long": "Snake ist wahrscheinlich das bekannteste Spiel der gesamten Handy-Spielgeschichte, und seine Regel passt in einen Satz: Du steuerst eine Schlange, die niemals stehen bleibt, du frisst die Punkte, um zu wachsen, und du verlierst, wenn du eine Wand oder deinen eigenen Körper berührst. Die ganze Schwierigkeit entsteht aus diesem Wachstum: Je besser du spielst, desto mehr wirst du zu deinem eigenen Hindernis. Gute Spieler stürmen nicht auf das Futter zu, sondern besetzen den Raum, indem sie entlang der Ränder schlängeln, um jederzeit einen Fluchtkorridor offen zu halten. Ab einer bestimmten Länge muss jede Kurve mehrere Felder im Voraus geplant werden, und ein einziges Zögern genügt, um sich im eigenen Schwanz einzusperren. Das erklärt die Langlebigkeit des Spiels: Die Regeln lernt man in fünf Sekunden, die Beherrschung dauert Stunden. Spielbar mit der Tastatur am Rechner und per Wischen am Handy, ohne Download und ohne Konto.",
+    "controls": "Pfeiltasten oder Wischen am Handy."
+  },
+  "tic-tac-toe": {
+    "title": "Tic-Tac-Toe",
+    "short": "Bringe drei Symbole vor deinem Gegner in eine Reihe.",
+    "long": "Tic-Tac-Toe ist das kürzeste Strategiespiel, das es gibt: ein Raster aus drei mal drei Feldern, zwei Symbole, und wer zuerst drei Kreuze oder drei Kreise in eine Reihe bringt, gewinnt. Seine Einfachheit verbirgt eine amüsante mathematische Eigenschaft: Das Spiel ist vollständig gelöst. Zwei Spieler, die die optimale Strategie kennen, landen immer im Unentschieden, und die erste Regel, die man sich merken sollte, lautet: Die Mitte und die vier Ecken sind deutlich mehr wert als die Seitenfelder. Das eigentliche Spiel besteht also darin, den Fehler des Gegners zu erkennen und dann eine Doppeldrohung aufzubauen: zwei mögliche Reihen gleichzeitig, die sich nicht beide blockieren lassen. Es ist ein hervorragendes Zwei-Spieler-Spiel auf einem Bildschirm, ideal für eine Partie von dreißig Sekunden, und für Jüngere ein klassischer Einstieg in Logik und Vorausdenken. Nichts zu installieren: Seite öffnen und spielen.",
+    "controls": "Klicke auf ein freies Feld."
+  },
+  "tilt-maze": {
+    "title": "Tilt Maze",
+    "short": "Führe die Kugel zum Ausgang des Labyrinths.",
+    "long": "Tilt Maze greift die Idee des Taschenlabyrinths auf, das man in alle Richtungen kippte, um eine Kugel zum Ausgang zu rollen. Hier geben die Pfeiltasten die Neigung vor, und die Kugel rollt weiter, bis sie auf eine Wand trifft: Du steuerst also nicht die Entfernung, nur die Richtung. Diese Einschränkung ändert alles. Ein Labyrinth, das trivial aussieht, wird zu einer echten Knobelaufgabe, weil jeder Zug dich ans andere Ende des Gangs schickt und du Wände als Haltepunkte nutzen musst. Die richtige Methode besteht darin, den Plan vor dem Ziehen zu lesen, die Hindernisse zu erkennen, die als Bremse dienen, und dann die Abfolge der Richtungen in der passenden Reihenfolge zusammenzusetzen. Es ist ein ruhiges Spiel ohne stressende Uhr, in dem man erst durch Probieren und dann durch Verstehen vorankommt. Es wird mit der Tastatur im Browser gespielt, ohne Installation und ohne Anmeldung.",
+    "controls": "Pfeiltasten."
+  },
+  "pong": {
+    "title": "Pong",
+    "short": "Das allererste Videospiel der Geschichte: Tempo und Reflexe.",
+    "long": "Pong ist das Spiel, das 1972 die Videospielindustrie ins Rollen brachte: zwei Schläger, ein eckiger Ball, keinerlei Kulisse und doch ein Prinzip, das nie gealtert ist. Jeder Spieler verteidigt seine Bildschirmhälfte und muss den Ball zurückspielen; der Punkt fällt, wenn der Gegner ihn passieren lässt. Die Feinheit, die viele erst beim Spielen entdecken: Der Ball springt nicht nur nach seinem Einfallswinkel ab, sondern die Stelle des Schlägers, die ihn berührt, verändert seine Flugbahn. Ein Treffer mit der Kante verändert den Winkel völlig und erlaubt Bälle, die nicht mehr zu erreichen sind. Und weil das Tempo mit jedem Schlagwechsel steigt, entscheidet sich das Ende einer Runde am reinen Reflex. Es ist das ideale Spiel für zwei an einer Tastatur: Die Partien sind kurz, spannungsreich, und die Revanche folgt sofort. Direkt im Browser spielbar, ohne Download, am Rechner wie am Tablet.",
+    "controls": "Pfeiltasten hoch/runter. Zweiter Spieler: W und S."
+  },
+  "minesweeper": {
+    "title": "Minesweeper",
+    "short": "Räume das Feld, ohne eine einzige Mine auszulösen.",
+    "long": "Minesweeper ist ein Spiel reiner Deduktion, und das unterscheidet es von den meisten Denkspielen: Es gibt nichts zu merken, nur zu schlussfolgern. Du deckst Felder auf, jede Zahl sagt dir, wie viele Minen sich unter den acht Nachbarfeldern befinden, und daraus leitest du ab, welche sicher sind. Die ersten Klicks sind Glückssache, doch das Schlussfolgern übernimmt sehr schnell: Eine „1“, die ein einziges unbekanntes Feld berührt, markiert zwingend eine Mine, zwei benachbarte Zahlen überschneiden sich und schließen Möglichkeiten aus, und Randkonstellationen lösen sich fast immer mit Sicherheit auf. Fähnchen auf erkannten Minen halten das Feld lesbar und verhindern den fatalen Klick aus Unachtsamkeit. Eine Partie endet entweder mit einem vollständig geräumten Feld oder mit einer Explosion – und dem sofortigen Wunsch, gleich eine neue zu starten. Im Browser spielbar, ohne Installation.",
+    "controls": "Linksklick zum Aufdecken, Rechtsklick für ein Fähnchen."
+  },
+  "sweet-match": {
+    "title": "Sweet Match",
+    "short": "Bringe drei gleiche Bonbons in eine Reihe, damit sie verschwinden.",
+    "long": "Sweet Match ist ein Reihenspiel, ein sogenanntes „Match-3“: Du tauschst zwei benachbarte Bonbons, um mindestens drei derselben Farbe in eine Reihe zu bringen, die dann verschwinden und die darüberliegenden nachrutschen lassen. Der Reiz des Genres entsteht nicht aus einfachen Reihen, sondern aus Kettenreaktionen: Wenn die Bonbons nachfallen, bilden sie manchmal von selbst neue Reihen, und ein einziger guter Zug kann ein Viertel des Feldes leeren. Erfahrene Spieler arbeiten deshalb unten am Spielfeld und nicht oben, denn jede Explosion unten lässt die ganze Spalte nachrutschen und vervielfacht die Chance auf eine Kaskade. Der zweite nützliche Reflex ist die Suche nach Reihen von vier oder fünf Bonbons, die sich deutlich mehr lohnen als ein schlichtes Dreier. Es ist ein Spiel, das für zwei Minuten genauso funktioniert wie für eine halbe Stunde, mit der Maus am Rechner oder dem Finger am Handy, ohne Download und ohne Konto.",
+    "controls": "Ziehe ein Bonbon auf ein Nachbarfeld, um die beiden zu tauschen."
+  },
+  "2048": {
+    "title": "2048",
+    "short": "Führe gleiche Steine zusammen und erreiche die 2048.",
+    "long": "2048 wird auf einem Raster aus vier mal vier Feldern gespielt. Du schiebst alle Steine in eine Richtung; Steine mit derselben Zahl verschmelzen und verdoppeln ihren Wert, und nach jedem Zug erscheint ein neuer Stein. Das erklärte Ziel ist der Stein 2048, doch die eigentliche Aufgabe besteht darin, das Feld nicht zu verstopfen. Die Strategie, die funktioniert, ist für Anfänger unintuitiv: Man sollte nicht verschmelzen, sobald es möglich ist, sondern seinen größten Stein in einer Ecke festhalten und niemals die Richtung nutzen, die ihn daraus lösen würde. Praktisch heißt das, fast ausschließlich in drei Richtungen zu spielen und entlang eines Randes eine absteigende Reihe aufzubauen. Verlorene Partien gehen fast immer aus demselben Grund verloren: ein senkrechter Zug zu viel, der den großen Stein in die Feldmitte verschiebt. Spielbar mit der Tastatur oder per Wischen, im Browser.",
+    "controls": "Pfeiltasten oder Wischen."
+  },
+  "flappy-wings": {
+    "title": "Flappy Wings",
+    "short": "Bring den Vogel zwischen die Röhren, Flügelschlag für Flügelschlag.",
+    "long": "Flappy Wings ruht auf einem einzigen Befehl: Du tippst, der Vogel steigt ruckartig, dann zieht ihn die Schwerkraft wieder nach unten. Es gibt nichts weiter zu lernen, und genau das macht das Spiel so schwer. Jede Röhre verlangt den richtigen Schlagrhythmus, weder zu schnell – der Vogel schießt an die Decke – noch zu langsam. Der klassische Anfängerfehler ist, die Flugbahn mit großen panischen Bewegungen korrigieren zu wollen: Gute Ergebnisse entstehen im Gegenteil aus kleinen, regelmäßigen Tipps, wobei man den unteren Rand der Lücke anpeilt statt ihre Mitte, denn ein Fall lässt sich immer leichter auffangen als ein Aufstieg. Die Partien dauern zu Beginn wenige Sekunden, und der Zähler wird schnell zur persönlichen Angelegenheit: Über zehn Röhren zu kommen ist bereits ein Erfolg. Es ist das Punktespiel schlechthin, spielbar mit einem Finger am Handy oder einer Taste an der Tastatur, ohne irgendetwas zu installieren.",
+    "controls": "Klick, Leertaste oder Tippen zum Flügelschlag."
+  },
+  "fruits": {
+    "title": "Früchte",
+    "short": "Zerschneide die fliegenden Früchte und meide die Bomben.",
+    "long": "Früchte ist ein Schnittspiel nach Geste: Früchte werden in die Luft geworfen, du ziehst eine Linie durch sie, um sie zu zerschneiden, und punktest umso mehr, je mehr eine einzige Bewegung erfasst. Regelmäßig mischen sich Bomben unter die Früchte, und eine davon zu berühren beendet die Partie – was ein Geschwindigkeitsspiel in ein Präzisionsspiel verwandelt. Der ganze Trick besteht darin, nicht wahllos über den Bildschirm zu wischen: Lange diagonale Bewegungen bringen Combos, sind aber auch die, die versehentlich eine Bombe durchqueren. Die besten Spieler warten einen Bruchteil einer Sekunde, bis sich die Früchte am höchsten Punkt ihrer Flugbahn sammeln, wo sie langsamer werden, und schneiden dann in einer einzigen saubere Linie. Die Partien sind kurz und nervös, perfekt auf dem Touchscreen, wo der Finger die Klinge ganz natürlich ersetzt. Direkt im Browser spielbar, ohne Installation.",
+    "controls": "Ziehe Maus oder Finger durch die Früchte."
+  },
+  "dot-muncher": {
+    "title": "Dot Muncher",
+    "short": "Friss alle Punkte im Labyrinth und weiche den Geistern aus.",
+    "long": "Dot Muncher ist ein Labyrinthspiel: Du durchquerst einen geschlossenen Plan, um alle Punkte darin zu fressen, verfolgt von Gegnern, die die Gänge patrouillieren. Das Level endet, wenn der letzte Punkt verschwindet. Was dem Genre seine Tiefe gibt: Die Verfolger bewegen sich nicht zufällig, sie folgen Bahnlogiken, was ihre Bewegungen für jeden vorhersehbar macht, der sich die Zeit nimmt, sie zu beobachten. Ein Anfänger flieht in gerader Linie und landet in einer Sackgasse; ein erfahrener Spieler kreist um einen Block, nutzt die Umgehungsgänge und lässt bewusst Punkte liegen, um einen Fluchtweg offen zu halten. Die großen Punkte kehren das Kräfteverhältnis vorübergehend um und sind für kritische Momente aufzusparen, nicht am Anfang des Levels zu verbrauchen. Spielbar mit der Tastatur im Browser, ohne Download und ohne Anmeldung.",
+    "controls": "Pfeiltasten."
+  },
+  "chess": {
+    "title": "Schach",
+    "short": "Schach für zwei auf demselben Bildschirm, ohne Anmeldung.",
+    "long": "Schach wird von zwei Personen auf einem Brett mit vierundsechzig Feldern gespielt, mit sechzehn Figuren pro Seite und einem einzigen Ziel: den gegnerischen König so in Schach zu setzen, dass er nicht entkommen kann. Es ist das meistuntersuchte Strategiespiel der Welt, und doch sind die Grundsätze, die die ersten Partien gewinnen, wenige. Das Zentrum des Brettes zu besetzen gibt deinen Figuren Beweglichkeit; Springer und Läufer zu entwickeln, bevor man dieselbe Figur zweimal zieht, gewinnt Zeit; den König durch frühe Rochade in Sicherheit zu bringen verhindert die Hälfte aller schnellen Niederlagen. Dann kommen die Abtäusche: Nicht alle Figuren sind gleich viel wert, und einen Bauern zu opfern, um eine Linie zu öffnen, ist oft eine ausgezeichnete Rechnung. Diese Fassung wird von zweien am selben Bildschirm gespielt, was sie gut geeignet macht, um jemandem etwas beizubringen oder eine Stellung in Ruhe nachzuspielen. Keine Installation, kein Konto.",
+    "controls": "Klicke eine Figur an, dann ihr Zielfeld."
+  },
+  "block-stacker": {
+    "title": "Block Stacker",
+    "short": "Staple die fallenden Steine und räume ganze Reihen ab.",
+    "long": "Block Stacker ist das bekannteste Stapelspiel seiner Art: Steine aus vier Blöcken kommen einer nach dem anderen herunter, du drehst und verschiebst sie, um Lücken zu füllen, und jede vollständige Reihe verschwindet und schafft Platz. Der Stapel steigt unaufhaltsam, das Tempo nimmt zu, und die Partie endet, wenn ein Stein nicht mehr hineinpasst. Die ganze Strategie besteht darin, nicht Zug um Zug zu spielen. Spieler, die besser werden, halten ihren Stapel so flach wie möglich, vermeiden geschlossene Löcher – also solche, die kein Stein füllen kann, bevor die Reihe darüber abgeräumt ist – und halten bewusst eine Spalte an einem Rand frei, um dort den langen Stein zu versenken und vier Reihen auf einmal abzuräumen. Zu wissen, wohin ein Stein gehört, noch bevor er ankommt, unterscheidet eine Partie von zwei Minuten von einer von zwanzig. Spielbar mit der Tastatur im Browser, ohne Installation.",
+    "controls": "Pfeil links/rechts zum Bewegen, hoch zum Drehen, Leertaste zum Fallenlassen."
+  },
+  "checkers": {
+    "title": "Dame",
+    "short": "Schlage die Steine des Gegners und lass dich krönen.",
+    "long": "Dame wird auf den dunklen Feldern eines Brettes gespielt: Die Steine ziehen ein Feld diagonal vorwärts, schlagen durch Überspringen eines gegnerischen Steins und werden zu „Damen“, wenn sie die letzte Reihe erreichen, was ihnen danach Züge in beide Richtungen erlaubt. Die Regeln sind in einer Minute erklärt, doch das Spiel ist weit taktischer, als es aussieht, denn Schlagzüge sind oft Pflicht und verketten sich: Ein scheinbares Opfer kann einen Mehrfachschlag auslösen, der die Stellung völlig umkehrt. Die praktische Folge ist, dass man Dame nicht spielt, indem man geradeaus vorrückt. Man muss seine Steine verbunden halten, damit sie sich gegenseitig schützen, seine Grundreihe so lange wie möglich halten, um die Krönung des Gegners zu verhindern, und Abtäusche zwei Züge im Voraus rechnen. Diese Fassung wird von zweien am selben Bildschirm gespielt, direkt im Browser, ohne Installation.",
+    "controls": "Klicke einen Stein an, dann sein Zielfeld."
+  },
+  "ninja-vs-evilcorp": {
+    "title": "Ninja vs EVILCORP",
+    "short": "Infiltriere die Büros von EVILCORP und schalte deine Feinde als Ninja aus.",
+    "long": "Ninja vs EVILCORP ist ein unabhängiges Actionspiel aus dem Wettbewerb js13kGames, dessen Regel lautet, dass das gesamte Spiel in dreizehn Kilobyte passen muss. Diese Einschränkung formt das Ergebnis vollständig: keine lange Einleitung, kein Tutorial, ein reduzierter Grafikstil und eine sofort lesbare Spielschleife. Du spielst einen Ninja, der in die Büros eines feindlichen Unternehmens eingedrungen ist, und kommst voran, indem du die Wachen ausschaltest, die dir den Weg versperren. Das Spiel belohnt ständige Bewegung statt Vorsicht: Stillstehen macht dich angreifbar, während das Verketten von Bewegungen und Angriffen erlaubt, einen Raum zu durchqueren, bevor die Gegner reagiert haben. Es ist ein gutes Beispiel dafür, was die Independent-Szene in sehr kurzen Formaten hervorbringt – bei den Mitteln Lichtjahre von kommerziellen Produktionen entfernt, oft aber erfindungsreicher. Entwickelt von remvst. Im Browser spielbar, ohne Installation.",
+    "controls": "Tastatur zum Bewegen, Maus zum Zielen und Angreifen."
+  },
+  "choch": {
+    "title": "CHOCH",
+    "short": "Ein generatives, hypnotisches audiovisuelles Erlebnis.",
+    "long": "CHOCH ist kein Spiel im klassischen Sinne, und genau das macht es interessant: Es ist ein audiovisuelles Erlebnis, bei dem Bild und Ton von Code erzeugt statt aus Dateien geladen werden. Wie die anderen js13kGames-Beiträge passt das Ganze in wenige Kilobyte, was den Autor zwingt, alles zu berechnen – die Formen, die Farben, die Musik. Das Ergebnis ist ein kurzes interaktives Stück, näher an generativer Kunst als an einem Punktespiel, in dem deine Handlungen verändern, was du siehst und hörst. Am besten geht man ohne Ziel heran: Man bleibt einige Minuten, beobachtet, wie die Muster reagieren, und versteht dabei, wie wenig Code genügt, um etwas Dichtes zu erzeugen. Mit Ton spielen, der die Hälfte der Arbeit übernimmt. Kein Download, alles läuft im Browser.",
+    "controls": "Tastatur."
+  },
+  "edge-not-found": {
+    "title": "Edge Not Found",
+    "short": "Ein Sokoban auf einem Feld ohne Ränder.",
+    "long": "Edge Not Found ist ein Kistenschiebespiel – ein Sokoban – mit einer Idee, die alles verändert: Das Spielfeld hat keinen Rand. Wenn du rechts hinausgehst, erscheinst du links wieder; gehst du oben hinaus, erscheinst du unten. Das Feld ist also eine in sich aufgerollte Fläche, und eine Wand, die dich zu blockieren scheint, lässt sich umgehen, indem man einmal um das Level herumgeht. Diese eine Regel macht die Rätsel zunächst verwirrend, weil unsere räumliche Intuition immer Grenzen voraussetzt. Man muss neu lernen, ein Level zu lesen: Eine Kiste am rechten Rand klebt in Wirklichkeit am linken Rand, und nach vorn zu schieben kann bedeuten, nach hinten zu schieben. Wie in jedem Sokoban ist eine falsch geschobene Kiste endgültig blockiert, also lohnt es sich, vor dem Zug nachzudenken. Ein js13kGames-Beitrag von 2020 von Tom Hermans, spielbar mit der Tastatur im Browser.",
+    "controls": "Pfeiltasten."
+  },
+  "fourfold": {
+    "title": "Fourfold",
+    "short": "Ein Rätsel aus Symmetrie und Rotation.",
+    "long": "Fourfold ist ein Rätsel, das um eine einzige Mechanik gebaut ist: die Drehung. Du drehst Gruppen von Feldern, um die Elemente in die richtige Anordnung zu bringen, und weil jede Drehung mehrere Teile gleichzeitig verschiebt, macht ein Zug, der eine Seite des Feldes löst, fast immer etwas auf der anderen wieder kaputt. Diese Verflechtung macht die Schwierigkeit des Spiels aus, nicht die Komplexität der Regeln – es gibt nur eine. Die Methode, die funktioniert, ist die von Rubik-artigen Rätseln: nicht versuchen, alles auf einmal zu setzen, sondern Folgen von Drehungen finden, die ein Teil verschieben und die anderen wieder an ihren Platz bringen. Die ersten Level löst man aus dem Gefühl, die späteren verlangen echtes Planen. Es ist ein stilles Spiel ohne Uhr, von der Art, die man öffnet, um fünf Minuten nachzudenken. Spielbar mit der Maus im Browser, ohne Installation und ohne Konto.",
+    "controls": "Maus: klicken, um eine Gruppe von Feldern zu drehen."
+  }
+}

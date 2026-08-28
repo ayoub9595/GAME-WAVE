@@ -1,0 +1,110 @@
+{
+  "whack-a-mole": {
+    "title": "Whack-a-Mole",
+    "short": "Test your reflexes and hit the moles the moment they pop up.",
+    "long": "Whack-a-Mole is pure reflex: moles pop up at random across a grid and you have to hit them before they disappear again. The pace speeds up as your score climbs, until the reaction window drops below half a second. That is where the game gets interesting: aiming is no longer enough, you need to anticipate the squares where moles appear most often and keep the cursor moving instead of parking it in the middle. A round lasts under two minutes, which makes it an ideal break game: you can restart as often as you like to beat your own record. No install, no sign-up, no download: the game starts in one click in your browser, on desktop as well as on mobile, where the touchscreen replaces the mouse without changing anything about how it plays.",
+    "controls": "Mouse or finger: hit the moles as they appear."
+  },
+  "snake": {
+    "title": "Snake",
+    "short": "The timeless classic: eat to grow, avoid the walls.",
+    "long": "Snake is probably the best-known game in the history of mobile gaming, and its rule fits in one sentence: you steer a snake that never stops moving, you eat the pellets to grow, and you lose if you touch a wall or your own body. All the difficulty comes from that growth: the better you do, the more you become your own obstacle. Good players do not rush at the food, they occupy space by weaving along the edges to keep an escape corridor open at all times. Past a certain length, every turn has to be planned several squares ahead, and a single hesitation is enough to trap you in your own tail. That is what explains the game's longevity: the rules take five seconds to learn, mastery takes hours. Playable with the keyboard on desktop and by swiping on mobile, with no download and no account.",
+    "controls": "Arrow keys, or swipe on mobile."
+  },
+  "tic-tac-toe": {
+    "title": "Tic-Tac-Toe",
+    "short": "Line up three symbols before your opponent does.",
+    "long": "Tic-Tac-Toe is the shortest strategy game there is: a three-by-three grid, two symbols, and the first to line up three crosses or three circles wins. Its simplicity hides an amusing mathematical property: the game is fully solved. Two players who know the optimal strategy always end in a draw, and the first rule to remember is that the centre and the four corners are worth far more than the side squares. So the real game is about spotting your opponent's mistake, then creating a double threat: two possible lines at once, impossible to block both. It is an excellent two-player game on a single screen, ideal for a thirty-second match, and a classic gateway to logic and forward thinking for younger players. Nothing to install: open the page and play.",
+    "controls": "Click an empty square."
+  },
+  "tilt-maze": {
+    "title": "Tilt Maze",
+    "short": "Guide the ball to the exit of the maze.",
+    "long": "Tilt Maze takes the idea of the pocket labyrinth you used to tilt in every direction to roll a ball to the exit. Here the arrow keys provide the tilt, and the ball keeps rolling until it hits a wall: you control the direction, never the distance. That constraint changes everything. A maze that looks trivial becomes a real puzzle, because every move sends you to the far end of a corridor and you have to use walls as stopping points. The right method is to read the layout before moving, spot the obstacles that will act as brakes, then compose the sequence of directions in the right order. It is a calm game with no stressful timer, where you make progress first by trial and error and then by understanding. It plays with the keyboard, in the browser, with no install and no sign-up.",
+    "controls": "Arrow keys."
+  },
+  "pong": {
+    "title": "Pong",
+    "short": "The very first video game ever made: speed and reflexes.",
+    "long": "Pong is the game that launched the video game industry in 1972: two paddles, a square ball, no scenery at all, and yet a principle that has never aged. Each player defends their side of the screen and has to return the ball; a point is scored when the opponent lets it through. The subtlety many people discover while playing is that the ball does not only bounce according to its incoming angle: the part of the paddle it hits changes its trajectory. Striking with the edge changes the angle completely, which lets you place shots that cannot be reached. And since the speed increases with every exchange, the end of a game comes down to pure reflex. It is the ideal two-player game on a single keyboard: rounds are short, tense, and the rematch is always immediate. Playable straight in the browser, no download, on desktop as well as tablet.",
+    "controls": "Up/down arrows. Second player: W and S."
+  },
+  "minesweeper": {
+    "title": "Minesweeper",
+    "short": "Clear the grid without setting off a single mine.",
+    "long": "Minesweeper is a game of pure deduction, and that is what sets it apart from most puzzle games: there is nothing to memorise, only reasoning to do. You reveal squares, each number tells you how many mines sit among the eight neighbouring squares, and from that you work out which ones are safe. The first clicks come down to luck, but reasoning takes over very quickly: a \"1\" touching a single unknown square necessarily marks a mine, two neighbouring numbers overlap to rule out possibilities, and edge configurations almost always resolve with certainty. Flagging identified mines keeps the grid readable and avoids the fatal click made out of distraction. A game ends either with a fully cleared grid or with an explosion — and the immediate urge to start another one. Playable in the browser, with no install.",
+    "controls": "Left click to reveal a square, right click to place a flag."
+  },
+  "sweet-match": {
+    "title": "Sweet Match",
+    "short": "Line up three identical candies to blast them.",
+    "long": "Sweet Match is a matching game, or \"match-3\": you swap two neighbouring candies to line up at least three of the same colour, which then disappear and let the ones above fall down. The appeal of the genre does not come from simple matches but from chain reactions: when candies fall, they sometimes form new matches on their own, and a single good move can clear a quarter of the board. Experienced players therefore work at the bottom of the board rather than the top, because every low explosion drops the whole column and multiplies the chances of a cascade. The other useful habit is to look for matches of four or five candies, which pay far better than a plain three. It is a game that works just as well for two minutes as for half an hour, with the mouse on desktop or a finger on mobile, no download and no account needed.",
+    "controls": "Drag a candy onto an adjacent square to swap the two."
+  },
+  "2048": {
+    "title": "2048",
+    "short": "Merge matching tiles to reach 2048.",
+    "long": "2048 is played on a four-by-four grid. You slide every tile in one direction; tiles carrying the same number merge and double their value, and a new tile appears after each move. The stated goal is to reach the 2048 tile, but the real challenge is not filling up the grid. The strategy that works is counter-intuitive for a beginner: you should not merge as soon as you can, but keep your biggest tile locked in a corner and never use the direction that would pull it out. In practice that means playing almost exclusively on three directions, and building a descending row along one edge. Lost games are almost always lost for the same reason: one vertical move too many that shifts the big tile into the middle of the board. Playable with the keyboard or by swiping, in the browser.",
+    "controls": "Arrow keys, or swipe."
+  },
+  "flappy-wings": {
+    "title": "Flappy Wings",
+    "short": "Guide the bird between the pipes, one flap at a time.",
+    "long": "Flappy Wings runs on a single command: you tap, the bird jumps up, then gravity pulls it back down. There is nothing else to learn, and that is exactly what makes the game so hard. Every pipe asks you to find the right flapping rhythm, neither too fast — the bird shoots to the ceiling — nor too slow. The classic beginner mistake is trying to correct course with big panicked movements: good scores come instead from small regular taps, aiming at the bottom of the gap rather than its centre, because falling is always easier to recover from than climbing. Games last a few seconds at first, and the counter quickly becomes a personal matter: getting past ten pipes is already an achievement. It is the score game par excellence, playable with one finger on mobile or one key on a keyboard, with nothing to install.",
+    "controls": "Click, spacebar or tap to flap."
+  },
+  "fruits": {
+    "title": "Fruits",
+    "short": "Slice the flying fruit and avoid the bombs.",
+    "long": "Fruits is a gesture-based slicing game: fruit is thrown into the air, you draw a line through it to cut it, and you score more the more pieces a single movement cuts. Bombs regularly mix in with the fruit, and touching one ends the game — which turns a speed game into a precision game. The whole trick is not to sweep the screen at random: long diagonal gestures earn combos, but they are also the ones that accidentally cross a bomb. The best players wait a fraction of a second for the fruit to gather at the top of its arc, where it slows down, then cut in one clean line. Rounds are short and nervous, perfect on a touchscreen where a finger naturally replaces the blade. Playable straight in the browser, with no install.",
+    "controls": "Drag the mouse or your finger through the fruit."
+  },
+  "dot-muncher": {
+    "title": "Dot Muncher",
+    "short": "Eat every pellet in the maze while dodging the ghosts.",
+    "long": "Dot Muncher is a maze game: you travel around a closed layout to eat every pellet in it, chased by enemies patrolling the corridors. The level ends when the last pellet disappears. What gives the genre its depth is that the chasers do not move at random: they follow trajectory logics, which makes their movement predictable for anyone who takes the time to watch them. A beginner runs away in a straight line and ends up cornered in a dead end; an experienced player circles a block, uses the bypass corridors and deliberately leaves pellets aside to keep an escape route open. The big pellets temporarily reverse the balance of power and are worth saving for critical moments, not eating at the start of the level. Playable with the keyboard in the browser, no download and no sign-up.",
+    "controls": "Arrow keys."
+  },
+  "chess": {
+    "title": "Chess",
+    "short": "Chess for two players on the same screen, no sign-up.",
+    "long": "Chess is played by two people on a board of sixty-four squares, with sixteen pieces each and a single objective: put the opposing king in check with no way out. It is the most studied strategy game in the world, and yet the principles that win your first games are few. Occupying the centre of the board gives your pieces mobility; developing knights and bishops before moving the same piece twice saves time; getting your king to safety with an early castle avoids half of all quick defeats. Then come the exchanges: not all pieces are worth the same, and accepting the loss of a pawn to open a file is often an excellent calculation. This version is played by two people on the same screen, which makes it a good way to teach someone or to replay a position calmly. No install, no account.",
+    "controls": "Click a piece, then its destination square."
+  },
+  "block-stacker": {
+    "title": "Block Stacker",
+    "short": "Stack the falling pieces and clear full lines.",
+    "long": "Block Stacker is the best-known stacking game of its kind: four-block pieces come down one at a time, you rotate and slide them to fill the gaps, and every completed line disappears and frees up space. The stack rises relentlessly, the speed increases, and the game ends when a piece can no longer fit. The whole strategy is about not playing move by move. Players who improve keep their stack as flat as possible, avoid closed holes — the ones no piece can fill before the line above has been cleared — and deliberately keep a column free along one edge to drop the long piece in and clear four lines at once. Knowing where a piece will go before it even arrives is what separates a two-minute game from a twenty-minute one. Playable with the keyboard in the browser, with no install.",
+    "controls": "Left/right arrows to move, up to rotate, space to drop."
+  },
+  "checkers": {
+    "title": "Checkers",
+    "short": "Capture your opponent's pieces and get crowned.",
+    "long": "Checkers is played on the dark squares of a board: pieces move forward one square diagonally, capture by jumping over an opposing piece, and become \"kings\" when they reach the far row, which then lets them move in both directions. The rules take a minute to explain, but the game is far more tactical than it looks, because captures are often compulsory and chained: an apparent sacrifice can trigger a multiple capture that completely reverses the position. The practical consequence is that you do not play checkers by marching straight ahead. You need to keep your pieces linked so they protect each other, hold your back row as long as possible to stop your opponent getting crowned, and count exchanges two moves ahead. This version is played by two people on the same screen, straight in the browser, with no install.",
+    "controls": "Click a piece, then its destination square."
+  },
+  "ninja-vs-evilcorp": {
+    "title": "Ninja vs EVILCORP",
+    "short": "Infiltrate EVILCORP's offices and take out your enemies as a ninja.",
+    "long": "Ninja vs EVILCORP is an independent action game from the js13kGames competition, whose rule is that the entire game must fit in thirteen kilobytes. That constraint shapes the result completely: no long introduction, no tutorial, a stripped-back graphic style and an immediately readable game loop. You play a ninja infiltrating the offices of a hostile company, and you progress by taking out the guards in your way. The game rewards continuous movement rather than caution: standing still leaves you exposed, whereas chaining movement and attacks lets you cross a room before the enemies have reacted. It is a good illustration of what the independent game scene produces in very short formats — worlds away from commercial productions in terms of resources, but often more inventive. Developed by remvst. Playable in the browser, with no install.",
+    "controls": "Keyboard to move, mouse to aim and attack."
+  },
+  "choch": {
+    "title": "CHOCH",
+    "short": "A generative, hypnotic audio-visual experience.",
+    "long": "CHOCH is not a game in the classic sense of the word, and that is what makes it interesting: it is an audio-visual experience where image and sound are generated by code rather than loaded from files. Like the other js13kGames entries, the whole thing fits in a few kilobytes, which forces the author to produce everything by computation — the shapes, the colours, the music. The result is a short interactive piece, closer to generative art than to a score game, where your actions change what you see and what you hear. It is best approached without looking for an objective: you stay a few minutes, you watch how the patterns react, and along the way you understand how little code it takes to produce something dense. Play it with sound on, which does half the work. No download, everything runs in the browser.",
+    "controls": "Keyboard."
+  },
+  "edge-not-found": {
+    "title": "Edge Not Found",
+    "short": "A Sokoban on a grid that wraps around forever.",
+    "long": "Edge Not Found is a crate-pushing game — a Sokoban — with one idea that changes everything: the grid has no edge. When you exit on the right, you reappear on the left; when you exit at the top, you reappear at the bottom. The board is therefore a surface wrapped around itself, and a wall that seems to block you can be worked around by going all the way round the level. That single rule makes the puzzles disorienting at first, because our spatial intuition always assumes boundaries. You have to relearn how to read a level: a crate on the right edge is in fact stuck against the left edge, and pushing forward can amount to pushing backward. As in any Sokoban, a badly pushed crate is stuck for good, so it pays to think before moving. A js13kGames 2020 entry by Tom Hermans, playable with the keyboard in the browser.",
+    "controls": "Arrow keys."
+  },
+  "fourfold": {
+    "title": "Fourfold",
+    "short": "A puzzle of symmetry and rotation.",
+    "long": "Fourfold is a puzzle built around a single mechanic: rotation. You rotate groups of squares to bring the pieces into the right configuration, and since each rotation moves several pieces at once, a move that solves one side of the board almost always undoes something on the other. That interdependence is what makes the game hard, not the complexity of the rules — there is only one. The method that works is the one used for Rubik-style puzzles: rather than trying to place everything at once, identify sequences of rotations that move one piece while putting the others back where they were. The first levels can be solved on intuition, the later ones require real planning. It is a quiet, timer-free game, the kind you open to think for five minutes. Playable with the mouse in the browser, with no install and no account.",
+    "controls": "Mouse: click to rotate a group of squares."
+  }
+}

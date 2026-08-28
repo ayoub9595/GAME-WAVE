@@ -50,8 +50,17 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* stretch et non center : avec align-items:center, <main> était
+       dimensionné sur son contenu (shrink-to-fit) et la grille de jeux
+       n'utilisait qu'une fraction de la largeur disponible. */
+    align-items: stretch;
     padding: 10px;
+}
+
+/* Les blocs qui doivent rester centrés le font par leur propre max-width */
+.content-center > * {
+    min-width: 0;
+    max-width: 100%;
 }
 
 .skip-link {
@@ -145,6 +154,9 @@ body {
     }
 }
 
+/* fadeInUp / slideIn / shimmer sont aussi déclarés dans les modules CSS qui
+   les utilisent (obligatoire : un module renomme ses références d'animation).
+   On les garde ici pour toute utilisation depuis une feuille globale. */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -199,6 +211,15 @@ body {
 }
 
 /* Mobiles (480px) */
+@media (max-width: 768px) {
+    /* Sur mobile chaque bloc gère sa propre marge intérieure : le padding
+       de 10 px ici créait un liseré autour du header et rognait la largeur
+       utile de la grille de jeux. */
+    .content-center {
+        padding: 0;
+    }
+}
+
 @media (max-width: 480px) {
     body.menu-open {
         overflow: hidden;

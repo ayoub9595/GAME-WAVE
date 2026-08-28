@@ -1,9 +1,15 @@
-.logo {
-    display: flex;
+.logo-link {
+    display: inline-flex;
     align-items: center;
-    font-size: 22px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    min-width: 0;
+}
+
+/* Taille pilotée par la CSS : le SVG s'adapte, il ne déborde plus jamais.
+   350 / 90 = ratio du viewBox. */
+.logo {
+    display: block;
+    width: clamp(150px, 34vw, 290px);
+    height: auto;
     filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.5));
     color: var(--text);
 }
@@ -14,5 +20,13 @@
 }
 
 :global([data-theme='light']) .logo-slogan {
-    fill: #000000 !important;
+    fill: #0f172a;
+}
+
+/* Sur mobile, le slogan devient illisible sous ~11 px : on garde le logo
+   compact et lisible plutôt que de le réduire indéfiniment. */
+@media (max-width: 480px) {
+    .logo {
+        width: clamp(140px, 46vw, 200px);
+    }
 }

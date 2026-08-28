@@ -12,7 +12,19 @@ dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# Vignettes d'origine, conservées en local après optimisation
+# (npm run images les déplace ici). Ne pas versionner : 29 Mo inutiles.
+src/assets/_originals/
+
+# Environnement
+.env
+.env.local
+.env.*.local
+
+# Plateformes
+.vercel
+
+# Éditeurs et OS
 .vscode/*
 !.vscode/extensions.json
 .idea

@@ -86,8 +86,14 @@
     }
 
     .pagination-btn {
-        padding: clamp(6px, 1.5vw, 10px) clamp(12px, 3vw, 18px);
+        padding: 10px clamp(14px, 4vw, 22px);
         font-size: clamp(13px, 1.8vw, 15px);
+        /* 44 px : cible tactile confortable */
+        min-height: 44px;
+    }
+
+    .pagination-btn:hover:not(:disabled) {
+        transform: none;
     }
 }
 
