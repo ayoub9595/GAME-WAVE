@@ -1,0 +1,9 @@
+.disclosure {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    border-left: 3px solid var(--primary);
+    padding: 0.25rem 0 0.25rem 0.75rem;
+    margin: 1.5rem 0;
+    max-width: 70ch;
+    line-height: 1.6;
+}

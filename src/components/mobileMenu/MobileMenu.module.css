@@ -93,8 +93,10 @@
 .menu-logo-slogan { font-size: 9px; color: var(--text); opacity: 0.6; letter-spacing: 1px; margin-top: 2px; }
 
 .menu-close-btn {
-    width: 36px;
-    height: 36px;
+    /* 44 px : cible tactile confortable, recommandation Apple et Google */
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -128,4 +130,40 @@
 
 @media (max-width: 768px) {
     .hamburger-btn { display: flex; }
+}
+
+/* ==========================================================================
+   Animations locales au module.
+
+   Elles étaient déclarées dans theme.css (feuille globale) alors que
+   `animation: slideIn` est écrit ici, dans un module CSS : Vite renomme la
+   référence en `_slideIn_xxxx`, qui ne correspondait à aucun @keyframes.
+   L'animation ne se déclenchait donc jamais, et comme .menu-item part à
+   opacity:0, les entrées du menu mobile restaient invisibles.
+   ========================================================================== */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Le bouton hamburger se transforme en croix : inutile de garder deux
+   fermetures superposées, on masque le hamburger quand le menu est ouvert. */
+.hamburger-btn.active {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Sécurité : si les animations sont désactivées, le menu doit rester lisible. */
+@media (prefers-reduced-motion: reduce) {
+    .menu-item {
+        opacity: 1;
+        transform: none;
+    }
 }

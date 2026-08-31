@@ -5,9 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
+    "build:only": "vite build",
+    "images": "node scripts/optimize-images.mjs",
+    "og-image": "node scripts/make-og-image.mjs",
+    "fix-content": "node scripts/apply-content-fixes.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:e2e": "node scripts/smoke-test.mjs",
+    "test:games": "node scripts/check-games.mjs",
+    "test:mobile": "node scripts/mobile-audit.mjs"
   },
   "dependencies": {
     "i18next": "^25.8.18",
@@ -15,7 +22,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-i18next": "^16.5.8",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -26,6 +33,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "sharp": "^0.35.4",
     "vite": "npm:rolldown-vite@7.2.5"
   },
   "overrides": {

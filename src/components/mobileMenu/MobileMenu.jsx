@@ -1,99 +1,119 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { categories, games, getGamesByCategory } from '../../data/games'
+import { useLocalized } from '../../hooks/useLocalized'
 import styles from './MobileMenu.module.css'
+
+const ICONS = { arcade: '🕹️', puzzle: '🧩', plateau: '♟️', action: '💥' }
 
 export default function MobileMenu() {
     const [isOpen, setIsOpen] = useState(false)
+    const { t } = useTranslation()
+    const { categoryName } = useLocalized()
 
     useEffect(() => {
-        if (isOpen) {
-            document.body.classList.add('menu-open')
-        } else {
-            document.body.classList.remove('menu-open')
-        }
-
-        return () => {
-            document.body.classList.remove('menu-open')
-        }
+        document.body.classList.toggle('menu-open', isOpen)
+        return () => document.body.classList.remove('menu-open')
     }, [isOpen])
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen)
-    }
+    // Fermeture au clavier : Échap
+    useEffect(() => {
+        if (!isOpen) return
+        const onKey = (e) => {
+            if (e.key === 'Escape') setIsOpen(false)
+        }
+        window.addEventListener('keydown', onKey)
+        return () => window.removeEventListener('keydown', onKey)
+    }, [isOpen])
 
-    const menuItems = [
-        { name: 'Accueil', icon: '🏠', href: '#home' },
-        { name: 'Nouveaux Jeux', icon: '✨', href: '#nouveaux' },
-        { name: 'Populaires', icon: '🔥', href: '#populaires' },
-        { name: 'Sports', icon: '⚽', href: '#sports' },
-        { name: 'Action', icon: '💥', href: '#action' },
-        { name: 'Puzzle', icon: '🧩', href: '#puzzle' },
-        { name: 'Course', icon: '🏎️', href: '#course' },
-        { name: 'Favoris', icon: '⭐', href: '#favoris' },
-    ]
+    const close = () => setIsOpen(false)
 
     return (
         <>
-            {/* Bouton Hamburger */}
             <button
+                type="button"
                 className={`${styles['hamburger-btn']} ${isOpen ? styles.active : ''}`}
-                onClick={toggleMenu}
-                aria-label="Menu"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label={t('menu')}
+                aria-expanded={isOpen}
             >
                 <span className={styles['hamburger-line']}></span>
                 <span className={styles['hamburger-line']}></span>
                 <span className={styles['hamburger-line']}></span>
             </button>
 
-            {/* Overlay */}
             <div
                 className={`${styles['menu-overlay']} ${isOpen ? styles.active : ''}`}
-                onClick={toggleMenu}
+                onClick={close}
             ></div>
 
-            {/* Menu Latéral */}
             <nav className={`${styles['mobile-menu']} ${isOpen ? styles.active : ''}`}>
                 <div className={styles['mobile-menu-header']}>
                     <div className={styles['menu-logo']}>
                         <span className={styles['menu-logo-text']}>GAMEWAVE</span>
-                        <span className={styles['menu-logo-slogan']}>RIDE THE NEXT LEVEL</span>
+                        <span className={styles['menu-logo-slogan']}>{t('logo_subtitle')}</span>
                     </div>
                     <button
+                        type="button"
                         className={styles['menu-close-btn']}
-                        onClick={toggleMenu}
-                        aria-label="Fermer le menu"
+                        onClick={close}
+                        aria-label={t('close')}
                     >
                         ✕
                     </button>
                 </div>
 
                 <ul className={styles['menu-items']}>
-                    {menuItems.map((item, index) => (
+                    <li className={styles['menu-item']}>
+                        <Link to="/" onClick={close} className={styles['menu-link']}>
+                            <span className={styles['menu-icon']}>🏠</span>
+                            <span className={styles['menu-text']}>{t('nav_home')}</span>
+                            <span className={styles['menu-arrow']}>›</span>
+                        </Link>
+                    </li>
+
+                    {categories.map((c, i) => (
                         <li
-                            key={item.name}
+                            key={c.slug}
                             className={styles['menu-item']}
-                            style={{ animationDelay: `${index * 0.05}s` }}
+                            style={{ animationDelay: `${(i + 1) * 0.05}s` }}
                         >
-                            <a
-                                href={item.href}
-                                onClick={toggleMenu}
-                                className={styles['menu-link']}
-                            >
-                                <span className={styles['menu-icon']}>{item.icon}</span>
-                                <span className={styles['menu-text']}>{item.name}</span>
+                            <Link to={`/category/${c.slug}`} onClick={close} className={styles['menu-link']}>
+                                <span className={styles['menu-icon']}>{ICONS[c.slug] || '🎮'}</span>
+                                <span className={styles['menu-text']}>
+                                    {categoryName(c)} ({getGamesByCategory(c.slug).length})
+                                </span>
                                 <span className={styles['menu-arrow']}>›</span>
-                            </a>
+                            </Link>
                         </li>
                     ))}
+
+                    <li className={styles['menu-item']} style={{ animationDelay: `${(categories.length + 1) * 0.05}s` }}>
+                        <Link to="/favorites" onClick={close} className={styles['menu-link']}>
+                            <span className={styles['menu-icon']}>⭐</span>
+                            <span className={styles['menu-text']}>{t('nav_favorites')}</span>
+                            <span className={styles['menu-arrow']}>›</span>
+                        </Link>
+                    </li>
+
+                    <li className={styles['menu-item']} style={{ animationDelay: `${(categories.length + 2) * 0.05}s` }}>
+                        <Link to="/about" onClick={close} className={styles['menu-link']}>
+                            <span className={styles['menu-icon']}>ℹ️</span>
+                            <span className={styles['menu-text']}>{t('nav_about')}</span>
+                            <span className={styles['menu-arrow']}>›</span>
+                        </Link>
+                    </li>
                 </ul>
 
                 <div className={styles['menu-footer']}>
                     <div className={styles['menu-footer-item']}>
                         <span>🎮</span>
-                        <span>+1000 Jeux</span>
+                        <span>{games.length} {t('games')}</span>
                     </div>
                     <div className={styles['menu-footer-item']}>
                         <span>🆓</span>
-                        <span>100% Gratuit</span>
+                        <span>100% {t('free')}</span>
                     </div>
                 </div>
             </nav>

@@ -1,33 +1,34 @@
-import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from '../../components/header/Header';
 import CategorySection from '../../components/categorySection/CategorySection';
 import HeroBanner from '../../components/heroBanner/HeroBanner';
-import { categories } from '../../data/games';
+import CategoryNav from '../../components/categoryNav/CategoryNav';
+import AdSlot from '../../components/ads/AdSlot';
+import { searchGames } from '../../data/games';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import styles from './Home.module.css';
 
 export default function Home() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [searchParams] = useSearchParams();
     const query = searchParams.get('search') || '';
 
-    useEffect(() => {
-        document.title = `GAME WAVE – ${t('logo_subtitle')}`;
-    }, [i18n.language, t]);
+    useDocumentTitle(`GAME WAVE – ${t('logo_subtitle')}`);
 
-    const filteredCategories = categories.map(cat => ({
-        ...cat,
-        games: cat.games.filter(game =>
-            game.title.toLowerCase().includes(query.toLowerCase())
-        )
-    })).filter(cat => cat.games.length > 0);
+    // La recherche porte maintenant sur le titre, la description et les tags.
+    const results = searchGames(query);
+    const filteredCategories = results.length
+        ? [{ id: 1, title: t('category_1_title', { defaultValue: 'JEUX' }), games: results }]
+        : [];
 
     return (
         <>
             <Header />
             <main>
-                <HeroBanner />
+                {!query && <HeroBanner />}
+                <CategoryNav />
+                <AdSlot id="home-below-hero" format="banner" />
                 {filteredCategories.length > 0 ? (
                     filteredCategories.map(cat => (
                         <CategorySection key={cat.id} category={cat} />

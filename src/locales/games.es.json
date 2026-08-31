@@ -1,0 +1,110 @@
+{
+  "whack-a-mole": {
+    "title": "Whack-a-Mole",
+    "short": "Pon a prueba tus reflejos y golpea a los topos en cuanto salgan.",
+    "long": "Whack-a-Mole es puro reflejo: los topos asoman al azar en una cuadrícula y tienes que golpearlos antes de que vuelvan a esconderse. El ritmo se acelera a medida que sube tu puntuación, hasta que la ventana de reacción baja de medio segundo. Ahí es donde el juego se vuelve interesante: ya no basta con apuntar, hay que anticipar las casillas donde los topos aparecen más a menudo y mantener el cursor en movimiento en lugar de dejarlo en el centro. Una partida dura menos de dos minutos, lo que lo convierte en un juego de pausa ideal: puedes reiniciar tantas veces como quieras para batir tu propio récord. Sin instalación, sin registro y sin descargas: la partida arranca con un clic en tu navegador, tanto en ordenador como en móvil, donde la pantalla táctil sustituye al ratón sin cambiar nada del principio del juego.",
+    "controls": "Ratón o dedo: golpea a los topos que aparecen."
+  },
+  "snake": {
+    "title": "Snake",
+    "short": "El clásico de siempre: come para crecer y evita los muros.",
+    "long": "Snake es probablemente el juego más conocido de toda la historia del juego móvil, y su regla cabe en una frase: manejas una serpiente que avanza sin detenerse nunca, comes las bolitas para crecer y pierdes si tocas un muro o tu propio cuerpo. Toda la dificultad viene de ese crecimiento: cuanto mejor lo haces, más te conviertes en tu propio obstáculo. Los buenos jugadores no corren hacia la comida, ocupan el espacio serpenteando junto a los bordes para mantener siempre abierto un pasillo de salida. A partir de cierta longitud, cada giro debe planificarse varias casillas por adelantado, y una sola duda basta para encerrarte en tu propia cola. Eso explica la longevidad del juego: las reglas se aprenden en cinco segundos, el dominio lleva horas. Se juega con el teclado en ordenador y deslizando el dedo en móvil, sin descargas y sin cuenta.",
+    "controls": "Teclas de flecha, o desliza el dedo en móvil."
+  },
+  "tic-tac-toe": {
+    "title": "Tres en línea",
+    "short": "Alinea tres símbolos antes que tu rival.",
+    "long": "El tres en línea es el juego de estrategia más corto que existe: una cuadrícula de tres por tres, dos símbolos, y gana el primero que alinea tres cruces o tres círculos. Su simplicidad esconde una propiedad matemática divertida: el juego está completamente resuelto. Dos jugadores que conocen la estrategia óptima acaban siempre en empate, y la primera regla que hay que recordar es que el centro y las cuatro esquinas valen mucho más que las casillas laterales. Así que el juego de verdad consiste en detectar el error del rival y crear entonces una doble amenaza: dos alineaciones posibles a la vez, imposibles de bloquear las dos. Es un excelente juego para dos en la misma pantalla, ideal para una partida de treinta segundos, y una puerta de entrada clásica a la lógica y la anticipación para los más pequeños. Nada que instalar: abres la página y juegas.",
+    "controls": "Haz clic en una casilla libre."
+  },
+  "tilt-maze": {
+    "title": "Tilt Maze",
+    "short": "Guía la bola hasta la salida del laberinto.",
+    "long": "Tilt Maze retoma la idea del laberinto de bolsillo que se inclinaba en todas direcciones para hacer rodar una bola hasta la salida. Aquí son las flechas del teclado las que dan la inclinación, y la bola sigue rodando hasta encontrar un muro: no controlas la distancia, solo la dirección. Esa restricción lo cambia todo. Un laberinto que parece trivial se convierte en un auténtico rompecabezas, porque cada movimiento te envía al otro extremo del pasillo y hay que usar los muros como puntos de parada. El buen método consiste en leer el plano antes de moverse, localizar los obstáculos que servirán de freno y componer luego la secuencia de direcciones en el orden correcto. Es un juego tranquilo, sin cronómetro que estrese, en el que se progresa primero a tientas y después por comprensión. Se juega con el teclado, en el navegador, sin instalación ni registro.",
+    "controls": "Teclas de flecha."
+  },
+  "pong": {
+    "title": "Pong",
+    "short": "El primer videojuego de la historia: velocidad y reflejos.",
+    "long": "Pong es el juego que lanzó la industria del videojuego en 1972: dos palas, una pelota cuadrada, ningún decorado y, sin embargo, un principio que no ha envejecido nunca. Cada jugador defiende su lado de la pantalla y debe devolver la pelota; el punto se marca cuando el rival la deja pasar. La sutileza que muchos descubren jugando es que la pelota no rebota solo según su ángulo de llegada: el punto de la pala que la toca modifica su trayectoria. Golpear con el borde cambia el ángulo por completo, lo que permite colocar pelotas imposibles de alcanzar. Y como la velocidad aumenta en cada intercambio, los finales de partida se juegan a puro reflejo. Es el juego ideal para dos en el mismo teclado: las partidas son cortas, tensas, y la revancha siempre es inmediata. Se juega directamente en el navegador, sin descargas, tanto en ordenador como en tableta.",
+    "controls": "Flechas arriba/abajo. Segundo jugador: W y S."
+  },
+  "minesweeper": {
+    "title": "Buscaminas",
+    "short": "Despeja la cuadrícula sin hacer estallar ninguna mina.",
+    "long": "El buscaminas es un juego de pura deducción, y eso lo distingue de la mayoría de los juegos de reflexión: no hay nada que memorizar, solo razonar. Descubres casillas, cada número te indica cuántas minas hay entre las ocho casillas vecinas y de ahí deduces cuáles son seguras. Los primeros clics son cuestión de suerte, pero el razonamiento toma el relevo muy pronto: un «1» que toca una única casilla desconocida señala forzosamente una mina, dos números vecinos se cruzan para eliminar posibilidades y las configuraciones de borde se resuelven casi siempre con certeza. Poner banderas en las minas identificadas mantiene la cuadrícula legible y evita el clic fatal por distracción. Una partida acaba con la cuadrícula completamente despejada o con una explosión, y con las ganas inmediatas de empezar otra. Se juega en el navegador, sin instalación.",
+    "controls": "Clic izquierdo para descubrir, clic derecho para poner una bandera."
+  },
+  "sweet-match": {
+    "title": "Sweet Match",
+    "short": "Alinea tres caramelos iguales para hacerlos estallar.",
+    "long": "Sweet Match es un juego de alineación, o «match-3»: intercambias dos caramelos vecinos para alinear al menos tres del mismo color, que entonces desaparecen y dejan caer los de arriba. El placer del género no viene de las alineaciones simples, sino de las reacciones en cadena: cuando los caramelos caen, a veces forman nuevas alineaciones por sí solos, y una sola buena jugada puede vaciar un cuarto del tablero. Por eso los jugadores experimentados juegan en la parte baja del tablero y no en la alta, porque cada explosión abajo hace bajar toda la columna y multiplica las posibilidades de cascada. El otro reflejo útil es buscar alineaciones de cuatro o cinco caramelos, mucho más rentables que un simple tres. Es un juego que funciona igual de bien dos minutos que media hora, con el ratón en ordenador o con el dedo en móvil, sin descargas y sin crear cuenta.",
+    "controls": "Arrastra un caramelo a una casilla adyacente para intercambiarlos."
+  },
+  "2048": {
+    "title": "2048",
+    "short": "Fusiona las fichas iguales para llegar a 2048.",
+    "long": "2048 se juega en una cuadrícula de cuatro por cuatro. Deslizas todas las fichas en una dirección; las que llevan el mismo número se fusionan y duplican su valor, y aparece una ficha nueva después de cada movimiento. El objetivo declarado es llegar a la ficha 2048, pero el reto real es no saturar la cuadrícula. La estrategia que funciona resulta contraintuitiva para un principiante: no hay que fusionar en cuanto se puede, sino mantener la ficha más grande bloqueada en una esquina y no usar nunca la dirección que la sacaría de ahí. En la práctica eso significa jugar casi exclusivamente en tres direcciones y construir una fila decreciente a lo largo de un borde. Las partidas perdidas lo son casi siempre por lo mismo: un movimiento vertical de más que desplaza la ficha grande al centro del tablero. Se juega con el teclado o con el dedo, en el navegador.",
+    "controls": "Teclas de flecha, o desliza el dedo."
+  },
+  "flappy-wings": {
+    "title": "Flappy Wings",
+    "short": "Pasa el pájaro entre las tuberías, un aleteo a la vez.",
+    "long": "Flappy Wings se sostiene sobre un único mando: pulsas, el pájaro sube de golpe, y después la gravedad lo hace bajar. No hay nada más que aprender, y es precisamente eso lo que hace el juego tan difícil. Cada tubería exige encontrar el ritmo de aleteo correcto, ni demasiado rápido —el pájaro se va al techo— ni demasiado lento. El error clásico del principiante es querer corregir la trayectoria con grandes movimientos de pánico: las buenas puntuaciones se consiguen al contrario, con pulsaciones pequeñas y regulares, apuntando a la parte baja del hueco en lugar de al centro, porque siempre es más fácil recuperar una caída que una subida. Las partidas duran unos segundos al principio, y el contador se convierte enseguida en un asunto personal: pasar de diez tuberías ya es un logro. Es el juego de puntuación por excelencia, jugable con un solo dedo en móvil o una sola tecla en el teclado, sin instalar nada.",
+    "controls": "Clic, barra espaciadora o toque para aletear."
+  },
+  "fruits": {
+    "title": "Frutas",
+    "short": "Corta la fruta que vuela y evita las bombas.",
+    "long": "Frutas es un juego de corte por gesto: se lanzan frutas al aire, trazas una línea a través de ellas para cortarlas y marcas más puntos cuantas más corte un mismo movimiento. Regularmente se mezclan bombas con la fruta, y tocar una termina la partida, lo que convierte un juego de velocidad en un juego de precisión. Todo el truco consiste en no barrer la pantalla al azar: los gestos largos y diagonales dan combos, pero también son los que cruzan una bomba sin querer. Los mejores jugadores esperan una fracción de segundo a que la fruta se agrupe en lo alto de su trayectoria, donde pierde velocidad, y cortan entonces en una sola línea limpia. Las partidas son cortas y nerviosas, perfectas en pantalla táctil, donde el dedo sustituye con naturalidad a la hoja. Se juega directamente en el navegador, sin instalación.",
+    "controls": "Arrastra el ratón o el dedo a través de la fruta."
+  },
+  "dot-muncher": {
+    "title": "Dot Muncher",
+    "short": "Cómete todos los puntos del laberinto esquivando a los fantasmas.",
+    "long": "Dot Muncher es un juego de laberinto: recorres un plano cerrado para comerte todos sus puntos, perseguido por enemigos que patrullan los pasillos. El nivel termina cuando desaparece el último punto. Lo que da profundidad al género es que los perseguidores no se mueven al azar: siguen lógicas de trayectoria, lo que hace sus movimientos previsibles para quien se toma el tiempo de observarlos. Un jugador principiante huye en línea recta y acaba atrapado en un callejón sin salida; un jugador experimentado gira alrededor de un bloque, usa los pasillos de rodeo y deja puntos a propósito para mantener abierta una vía de escape. Los puntos grandes invierten temporalmente la relación de fuerzas y conviene guardarlos para los momentos críticos, no consumirlos al principio del nivel. Se juega con el teclado en el navegador, sin descargas ni registro.",
+    "controls": "Teclas de flecha."
+  },
+  "chess": {
+    "title": "Ajedrez",
+    "short": "Ajedrez para dos en la misma pantalla, sin registro.",
+    "long": "El ajedrez se juega entre dos personas en un tablero de sesenta y cuatro casillas, con dieciséis piezas por bando y un único objetivo: dar jaque al rey rival sin que pueda escapar. Es el juego de estrategia más estudiado del mundo y, sin embargo, los principios que hacen ganar las primeras partidas son pocos. Ocupar el centro del tablero da movilidad a tus piezas; sacar los caballos y los alfiles antes de mover dos veces la misma pieza gana tiempo; poner el rey a salvo con un enroque temprano evita la mitad de las derrotas rápidas. Luego llegan los cambios: no todas las piezas valen lo mismo, y aceptar perder un peón para abrir una columna suele ser un cálculo excelente. Esta versión se juega entre dos en la misma pantalla, lo que la convierte en un buen soporte para enseñar a alguien o para repasar una posición con calma. Sin instalación y sin cuenta.",
+    "controls": "Haz clic en una pieza y luego en su casilla de destino."
+  },
+  "block-stacker": {
+    "title": "Block Stacker",
+    "short": "Apila las piezas que caen y completa líneas enteras.",
+    "long": "Block Stacker es el juego de apilamiento más conocido del género: piezas de cuatro bloques bajan una a una, las giras y las deslizas para tapar los huecos, y cada línea completa desaparece liberando espacio. El montón sube sin remedio, la velocidad aumenta y la partida acaba cuando una pieza ya no puede entrar. Toda la estrategia consiste en no jugar jugada a jugada. Los jugadores que progresan mantienen el montón lo más plano posible, evitan los huecos cerrados —los que ninguna pieza podrá tapar antes de haber borrado la línea de encima— y reservan a propósito una columna libre en un borde para colocar allí la pieza larga y borrar cuatro líneas de golpe. Saber dónde poner una pieza antes incluso de que llegue es lo que separa una partida de dos minutos de una de veinte. Se juega con el teclado en el navegador, sin instalación.",
+    "controls": "Flechas izquierda/derecha para mover, arriba para girar, espacio para bajar."
+  },
+  "checkers": {
+    "title": "Damas",
+    "short": "Captura las piezas del rival y corónate.",
+    "long": "Las damas se juegan en las casillas oscuras de un tablero: las piezas avanzan una casilla en diagonal, capturan saltando por encima de una pieza rival y se convierten en «damas» al llegar a la última fila, lo que les permite después moverse en los dos sentidos. Las reglas se explican en un minuto, pero el juego es mucho más táctico de lo que parece, porque las capturas suelen ser obligatorias y encadenadas: un sacrificio aparente puede desencadenar una toma múltiple que da la vuelta por completo a la posición. La consecuencia práctica es que a las damas no se juega avanzando en línea recta. Hay que mantener las piezas ligadas para que se protejan entre sí, aguantar la última fila el mayor tiempo posible para impedir que el rival se corone, y contar los cambios dos jugadas por adelantado. Esta versión se juega entre dos en la misma pantalla, directamente en el navegador, sin instalación.",
+    "controls": "Haz clic en una pieza y luego en su casilla de destino."
+  },
+  "ninja-vs-evilcorp": {
+    "title": "Ninja vs EVILCORP",
+    "short": "Infíltrate en las oficinas de EVILCORP y elimina a tus enemigos como un ninja.",
+    "long": "Ninja vs EVILCORP es un juego de acción independiente surgido de la competición js13kGames, cuya regla es que el juego entero debe caber en trece kilobytes. Esa restricción moldea por completo el resultado: sin introducción larga, sin tutorial, con un estilo gráfico depurado y un bucle de juego legible de inmediato. Encarnas a un ninja infiltrado en las oficinas de una empresa hostil y avanzas eliminando a los guardias que te cortan el paso. El juego premia el movimiento continuo antes que la prudencia: quedarse quieto te deja expuesto, mientras que encadenar desplazamientos y ataques permite cruzar una sala antes de que los enemigos reaccionen. Es una buena muestra de lo que produce la escena del juego independiente en formatos muy cortos, a años luz de las producciones comerciales en medios, pero a menudo más inventiva. Desarrollado por remvst. Se juega en el navegador, sin instalación.",
+    "controls": "Teclado para moverse, ratón para apuntar y atacar."
+  },
+  "choch": {
+    "title": "CHOCH",
+    "short": "Una experiencia audiovisual generativa e hipnótica.",
+    "long": "CHOCH no es un juego en el sentido clásico del término, y eso es lo que lo hace interesante: es una experiencia audiovisual en la que la imagen y el sonido se generan por código en lugar de cargarse desde archivos. Como en las demás entradas de js13kGames, el conjunto cabe en unos pocos kilobytes, lo que obliga al autor a producirlo todo por cálculo: las formas, los colores, la música. El resultado es una pieza interactiva corta, más cercana al arte generativo que al juego de puntuación, donde tus acciones modifican lo que ves y lo que oyes. Conviene abordarla sin buscar un objetivo: te quedas unos minutos, observas cómo reaccionan los motivos y entiendes de paso lo poco que hace falta para producir algo denso. Hay que jugarla con sonido, que hace la mitad del trabajo. Sin descargas: todo se ejecuta en el navegador.",
+    "controls": "Teclado."
+  },
+  "edge-not-found": {
+    "title": "Edge Not Found",
+    "short": "Un Sokoban en una cuadrícula que se repite sin fin.",
+    "long": "Edge Not Found es un juego de empujar cajas —un Sokoban— con una idea que lo cambia todo: la cuadrícula no tiene bordes. Cuando sales por la derecha, reapareces por la izquierda; cuando sales por arriba, reapareces por abajo. El tablero es por tanto una superficie enrollada sobre sí misma, y un muro que parece bloquearte puede rodearse dando la vuelta al nivel. Esa única regla vuelve los enigmas desconcertantes al principio, porque nuestra intuición espacial siempre supone límites. Hay que reaprender a leer un nivel: una caja en el borde derecho está en realidad pegada al borde izquierdo, y empujar hacia delante puede equivaler a empujar hacia atrás. Como en todo Sokoban, una caja mal empujada queda bloqueada para siempre, así que conviene pensar antes de moverse. Una entrada de js13kGames 2020 de Tom Hermans, jugable con el teclado en el navegador.",
+    "controls": "Teclas de flecha."
+  },
+  "fourfold": {
+    "title": "Fourfold",
+    "short": "Un rompecabezas de simetría y rotación.",
+    "long": "Fourfold es un rompecabezas construido alrededor de una sola mecánica: la rotación. Giras grupos de casillas para llevar los elementos a la configuración correcta y, como cada rotación desplaza varias piezas a la vez, una jugada que resuelve un lado del tablero casi siempre deshace algo del otro. Esa interdependencia es lo que hace difícil el juego, no la complejidad de las reglas: solo hay una. El método que funciona es el de los rompecabezas tipo Rubik: no intentar colocarlo todo de golpe, sino identificar secuencias de rotaciones que desplacen una pieza devolviendo las demás a su sitio. Los primeros niveles se resuelven por intuición, los siguientes exigen planificar de verdad. Es un juego silencioso y sin cronómetro, del tipo que se abre para pensar cinco minutos. Se juega con el ratón en el navegador, sin instalación ni cuenta.",
+    "controls": "Ratón: haz clic para girar un grupo de casillas."
+  }
+}

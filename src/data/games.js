@@ -1,170 +1,36 @@
-import whackamoleImg from "../assets/whack-a-mole.png";
-import SnakeImg from "../assets/Snakegame.png";
-import TicTacToeImg from "../assets/TicTacToe.png";
-import TiltMazeImg from "../assets/Tilt-Maze.png";
-import PongImg from "../assets/pong-game.png";
-import Minesweeper from "../assets/Minesweeper.png";
-import CandycrashImg from "../assets/Candy-crash.png";
-import Img2048 from "../assets/2048.png";
-import FlappyBirdImg from "../assets/FlappyBird.png";
-import fruitsImg from "../assets/fruits.png";
-import PacManImg from "../assets/Pacman.png";
-import ChessImg from "../assets/Chess.jpg";
-import TetrisImg from "../assets/tetris-game.png";
-import CheckersImg from "../assets/checkers.png";
-import NinjaImg from "../assets/ninja-vs-evilcorp.png";
-import ChochImg from "../assets/choch.png";
-import EdgeNotFoundImg from "../assets/edge-not-found.png";
-import FourfoldImg from "../assets/fourfold.png";
+/**
+ * Couche d'accès au catalogue.
+ *
+ * Toute l'application passe par ces fonctions : plus aucun `categories[0].games`
+ * codé en dur. Ajouter une catégorie ou un jeu ne casse plus rien.
+ */
+import { games, categories } from './games.data.js';
 
-export const categories = [
-    {
-        id: 1,
-        title: "GAMES",
-        games: [
-            {
-                id: 1,
-                title: "Whack-a-mole",
-                description: "Test your reflexes and whack the moles as they appear!",
-                image: whackamoleImg,
-                gamePath: "/games/Whack-a-mole/index.html",
-                isNew: true
-            },
-            {
-                id: 2,
-                title: "Snake",
-                description: "The timeless classic, eat to grow and avoid the walls.",
-                image: SnakeImg,
-                gamePath: "/games/Snake/index.html",
-                isNew: false
-            },
-            {
-                id: 3,
-                title: "TicTacToe",
-                description: "Challenge your friends to this strategic duel.",
-                image: TicTacToeImg,
-                gamePath: "/games/TicTacToe/index.html",
-                isNew: false
-            },
-            {
-                id: 4,
-                title: "Tilt Maze",
-                description: "Navigate the maze and reach the goal.",
-                image: TiltMazeImg,
-                gamePath: "/games/TiltMaze/index.html",
-                isNew: false
-            },
-            {
-                id: 5,
-                title: "Pong",
-                description: "Speed and reflexes on the table.",
-                image: PongImg,
-                gamePath: "/games/Pong/index.html",
-                isNew: true
-            },
-            {
-                id: 6,
-                title: "Minesweeper",
-                description: "Clear the board without detonating any hidden mines.",
-                image: Minesweeper,
-                gamePath: "/games/Minesweeper/index.html",
-                isNew: false
-            },
-            {
-                id: 7,
-                title: "Candy-Crash",
-                description: "Blast the candies in this addictive puzzle!",
-                image: CandycrashImg,
-                gamePath: "/games/Candycrash/index.html",
-                isNew: true
-            },
-            {
-                id: 10,
-                title: "2048",
-                description: "Slide tiles and merge them together to reach the 2048 tile.",
-                image: Img2048,
-                gamePath: "/games/2048/index.html",
-                isNew: false
-            },
-            {
-                id: 12,
-                title: "Flappy Bird",
-                description: "Navigate the bird through the pipes without hitting them.",
-                image: FlappyBirdImg,
-                gamePath: "/games/floppybird/index.html",
-                isNew: false
-            },
-            {
-                id: 14,
-                title: " Fruits",
-                description: "Slice and dice juicy fruits like a true ninja!",
-                image: fruitsImg,
-                gamePath: "/games/fruits/index.html",
-                isNew: false
-            },
-            {
-                id: 16,
-                title: "PacMan",
-                description: "Chomp dots and avoid ghosts in this arcade classic.",
-                image: PacManImg,
-                gamePath: "/games/Pacman/index.html",
-                isNew: true
-            },
-            {
-                id: 17,
-                title: "Chess",
-                description: "Outsmart your opponent in the ultimate game of strategy.",
-                image: ChessImg,
-                gamePath: "/games/Chess/chess.html",
-                isNew: true
-            },
-            {
-                id: 18,
-                title: "Tetris",
-                description: "Clear lines with falling blocks in this classic puzzle game.",
-                image: TetrisImg,
-                gamePath: "/games/tetris-game/index.html",
-                isNew: true
-            },
-            {
-                id: 19,
-                title: "Checkers",
-                description: "Outmaneuver your opponent and king your pieces in this classic strategy board game.",
-                image: CheckersImg,
-                gamePath: "/games/checkers/index.html",
-                isNew: true
-            },
-            {
-                id: 20,
-                title: "Ninja vs EVILCORP",
-                description: "Outmaneuver your opponent and king your pieces in this classic strategy board game.",
-                image: NinjaImg,
-                gamePath: "/games/ninja-vs-evil-corp/index.html",
-                isNew: true
-            },
-            {
-                id: 21,
-                title: "CHOCH",
-                description: "A mesmerizing audio-visual experience combining generative graphics with sound.",
-                image: ChochImg,
-                gamePath: "/games/CHOCH/index.html",
-                isNew: true
-            },
-            {
-                id: 22,
-                title: "Edge Not Found",
-                description: "A mesmerizing audio-visual experience combining generative graphics with sound.",
-                image: EdgeNotFoundImg,
-                gamePath: "/games/Edge-Not-Found/index.html",
-            },
-            {
-                id: 23,
-                title: "Fourfold",
-                description: "A mesmerizing audio-visual experience combining generative graphics with sound.",
-                image: FourfoldImg,
-                gamePath: "/games/fourfold/index.html",
-                isNew: true
-            }
-        ]
-    }
-]
+export { games, categories };
+
+export const getGameBySlug = (slug) => games.find((g) => g.slug === slug);
+
+export const getGameById = (id) => games.find((g) => g.id === Number(id));
+
+export const getCategory = (slug) => categories.find((c) => c.slug === slug);
+
+export const getGamesByCategory = (slug) => games.filter((g) => g.category === slug);
+
+export const getRelatedGames = (game, limit = 6) =>
+  games.filter((g) => g.category === game.category && g.slug !== game.slug).slice(0, limit);
+
+/** Utilisé par la page Favoris : conserve l'ordre d'ajout de l'utilisateur. */
+export const getGamesBySlugs = (slugs = []) =>
+  slugs.map((slug) => getGameBySlug(slug)).filter(Boolean);
+
+export const searchGames = (query) => {
+  const q = query.trim().toLowerCase();
+  if (!q) return games;
+  return games.filter(
+    (g) =>
+      g.title.toLowerCase().includes(q) ||
+      g.formerTitle?.toLowerCase().includes(q) ||
+      g.shortDescription?.toLowerCase().includes(q) ||
+      g.tags?.some((t) => t.toLowerCase().includes(q))
+  );
+};
